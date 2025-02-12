@@ -5,7 +5,7 @@ excerpt: "Korporacje skartelowane z Welecją"
 ---
 
 
-Prezydium Welecji na rok akademicki 2023/2024:
+Prezydium Welecji na rok akademicki 2024/2025:
 
 | --- | ---- |
 | Prezes | kol. Maciej Wilk |
