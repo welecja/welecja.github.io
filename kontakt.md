@@ -5,17 +5,17 @@ excerpt: "Korporacje skartelowane z Welecją"
 ---
 
 
-Prezydium Welecji na rok akademicki 2024/2025:
+Prezydium Welecji na rok akademicki 2025/2026:
 
 | --- | ---- |
-| Prezes | kol. Maciej Wilk |
-| Wiceprezes wewnętrzny | kol. Ignacy Bojaryn |
-| Wiceprezes zewnętrzny | kol. Ignacy Bojaryn |
-| Sekretarz | kol. Maciej Bakalarski |
-| Skarbnik | kol. Kamil Zabawa |
+| Prezes | kol. Maciej Bakalarski |
+| Wiceprezes wewnętrzny | kol. Jakub Bereziewicz |
+| Wiceprezes zewnętrzny | kol. Mateusz Stańczyk |
+| Sekretarz | kol. Marek Żukowski |
+| Skarbnik | kol. Maciej Wróblewski |
 
 
-Oldermanem został kol. Mateusz Stańczyk
+Oldermanem został kol. Maciej Wilk
 
 
 
@@ -23,8 +23,9 @@ Oldermanem został kol. Mateusz Stańczyk
 We wszystkich sprawach prosimy o list na adres:  
 [welecja@welecja.pl](mailto:welecja@welecja.pl)
 
-Zachęcamy do odwiedzenia naszego profilu na facebooku:  
+Zachęcamy do odwiedzenia naszych profili w mediach społecznościowych:  
 [http://www.facebook.pl/welecja1883](http://www.facebook.pl/welecja1883)
+[https://www.instagram.com/welecja_1883](https://www.instagram.com/welecja_1883)
 
 Korespondecję tradycyjną prosimy kierować na adres:  
 KORPORACJA AKADEMICKA WELECJA  
