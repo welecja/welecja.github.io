@@ -24,7 +24,7 @@ We wszystkich sprawach prosimy o list na adres:
 [welecja@welecja.pl](mailto:welecja@welecja.pl)
 
 Zachęcamy do odwiedzenia naszych profili w mediach społecznościowych:  
-[http://www.facebook.pl/welecja1883](http://www.facebook.pl/welecja1883)
+[http://www.facebook.pl/welecja1883](http://www.facebook.pl/welecja1883)  
 [https://www.instagram.com/welecja_1883](https://www.instagram.com/welecja_1883)
 
 Korespondecję tradycyjną prosimy kierować na adres:  
