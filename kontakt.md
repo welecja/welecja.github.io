@@ -12,7 +12,7 @@ Prezydium Welecji na rok akademicki 2025/2026:
 | Wiceprezes wewnętrzny | kol. Jakub Bereziewicz |
 | Wiceprezes zewnętrzny | kol. Mateusz Stańczyk |
 | Sekretarz | kol. Marek Żukowski |
-| Skarbnik | kol. Maciej Wróblewski |
+| Skarbnik | kol. Adam Kobiernik |
 
 
 Oldermanem został kol. Maciej Wilk
@@ -33,7 +33,7 @@ Skrytka pocztowa 99
 00-950, Warszawa 1
 
 
-Korporacja Akademicka Welecja, ul. Obrońców Tobruku 21B/30, 01-494 Warszawa
+Korporacja Akademicka Welecja, ul. Śląska 46, 02-472 Warszawa
 Stowarzyszenie studenckie zarejestrowane w KRS pod numerem: 0000295248
 
 Numer rachunku bankowego: 
