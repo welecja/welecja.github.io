@@ -494,6 +494,86 @@ pre code {
     overflow-x: scroll;
   }
 }
+// Header nav dropdown (O Welecji)
+.item--dropdown {
+  position: relative;
+
+  // The parent's 'current section' grey must not cascade into the panel:
+  // reset children to normal link colour, then grey only the current child.
+  &.item--current .list--dropdown .item--nav a {
+    color: inherit;
+  }
+  &.item--current .list--dropdown .item--current a {
+    color: $captionColour;
+  }
+
+  .dropdown-label {
+    cursor: pointer;
+    margin-left: .2rem;
+    margin-right: .2rem;
+  }
+
+  .list--dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .item--nav {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .list--dropdown {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 10rem;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .1);
+      border-radius: 4px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .1);
+      padding: .3rem 0;
+      z-index: 50;
+      text-align: left;
+      transition: opacity .15s ease;
+
+      a {
+        display: block;
+        padding: .35rem 1rem;
+        white-space: nowrap;
+
+        &:hover {
+          background: rgba(0, 0, 0, .05);
+        }
+      }
+    }
+
+    &:hover .list--dropdown,
+    &:focus-within .list--dropdown {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .list--dropdown {
+      padding-left: 1.2rem;
+    }
+  }
+}
+
+// Allow the dropdown to escape the nav list on desktop (mobile collapse still needs overflow:hidden)
+@media (min-width: 640px) {
+  .header .nav--header,
+  .header .list--nav {
+    overflow: visible;
+  }
+}
+
 // Homepage: the long title "Korporacja Akademicka Welecja" gets one size down
 // so it sits cleanly beside the cyrkiel instead of wrapping at display size.
 .korporacja-akademicka-welecja .article--page h1 {

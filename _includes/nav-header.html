@@ -3,15 +3,38 @@
   <ul class="list  list--nav ">
     {% for item in site.navigation_header %}
 
-      {% if item.url contains '://' %}
-        {% assign url = item.url %}
+      {% if item.children %}
+        {% assign is_current_parent = false %}
+        {% for child in item.children %}
+          {% if child.url == page.url %}{% assign is_current_parent = true %}{% endif %}
+        {% endfor %}
+        <li class="item  item--nav  item--dropdown{% if is_current_parent %}  item--current{% endif %}">
+          <a class="hover-underlines  dropdown-label" tabindex="0" role="button" aria-haspopup="true">{{ item.title }}&nbsp;&#9662;</a>
+          <ul class="list  list--dropdown">
+            {% for child in item.children %}
+              {% if child.url contains '://' %}
+                {% assign churl = child.url %}
+              {% else %}
+                {% assign churl = child.url | relative_url %}
+              {% endif %}
+              <li class="item  item--nav{% if child.url == page.url %}  item--current{% endif %}">
+                <a href="{{ churl }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
       {% else %}
-        {% assign url = item.url | relative_url %}
-      {% endif %}
 
-      <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
-        <a class="hover-underlines" href="{{ url }}">{{ item.title }}</a>
-      </li>
+        {% if item.url contains '://' %}
+          {% assign url = item.url %}
+        {% else %}
+          {% assign url = item.url | relative_url %}
+        {% endif %}
+
+        <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
+          <a class="hover-underlines" href="{{ url }}">{{ item.title }}</a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
   <button class="button  button--nav" aria-label="Menu toggle">

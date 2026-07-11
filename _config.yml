@@ -113,22 +113,24 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 
 # 9. Site navigation
 navigation_header:
-- title: Wprowadzenie
-  url: /
-- title: Podstawy
-  url: /podstawy/
+- title: O Welecji
+  children:
+  - title: Wprowadzenie
+    url: /
+  - title: Podstawy
+    url: /podstawy/
+  - title: Historia
+    url: /historia/
+  - title: Kartele
+    url: /kartele/
+  - title: Archiwum&nbsp;&#8599;&#xFE0E;
+    url: https://www.welecja.pl/welecja-archive/welecja-pre2023/welecja.pl/index.html
 - title: Aktualności
   url: /blog/
-- title: Historia
-  url: /historia/
-- title: Kartele
-  url: /kartele/
-- title: Kontakt
-  url: /kontakt/
-- title: Archiwum&#8599;
-  url: https://www.welecja.pl/welecja-archive/welecja-pre2023/welecja.pl/index.html
 - title: Dla Weletów
   url: /dla-weletow/
+- title: Kontakt
+  url: /kontakt/
   
 # - title: Categories
 #   url: /categories/
