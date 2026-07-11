@@ -5,17 +5,17 @@ excerpt: "Korporacje skartelowane z Welecją"
 ---
 
 
-Prezydium Welecji na rok akademicki 2025/2026:
+Prezydium Welecji na rok akademicki 2026/2027:
 
 | --- | ---- |
-| Prezes | kol. Maciej Bakalarski |
-| Wiceprezes wewnętrzny | kol. Jakub Bereziewicz |
-| Wiceprezes zewnętrzny | kol. Mateusz Stańczyk |
-| Sekretarz | kol. Marek Żukowski |
+| Prezes | kol. Jan Cichowski |
+| Wiceprezes zewnętrzny | kol. Maciej Bakalarski |
+| Wiceprezes wewnętrzny | kol. Mateusz Nocuń |
+| Sekretarz | kol. Mikołaj Rumianek |
 | Skarbnik | kol. Adam Kobiernik |
 
 
-Oldermanem został kol. Maciej Wilk
+Oldermanem został kol. Ignacy Bojaryn
 
 
 
