@@ -1,0 +1,5 @@
+---
+title: "\"Elektrotechnika dawniej, dziś i jutro\""
+categories: archiwum
+---
+Na spotkaniu kwaterowym mieliśmy okazję gościć wybitnego inżyniera elektrotechnika, profesora nauk technicznych, wykładowcę Politechniki Warszawskiej, prezydenta **IES – IEEE Industrial Electronics Society**- największej tego typu organizacji na świecie - **Mariusza Malinowskiego**. Nasz prelegent zapoznał nas z historią polskiej elektrotechniki, obecną jej sytuacją, jak i światowymi perspektywami rozwoju oraz wyzwaniami stojącymi przed tą dziedziną, jaką są odnawialne źródła energii, jej magazynowanie czy elektromobilność. Nie mogło zabraknąć wątków weleckich - pan profesor pierwszy raz spotkał się z naszą korporacją poprzez naszego filistra, Witolda Idźkowskiego, pierwszego dyrektora pierwszej na ziemiach polskich elektrowni. Wśród zasług profesora Malinowskiego dla upamiętnienia naszego brata jest odsłonięta w Radomiu tablica i książka, za co z całego serca dziękujemy, jak i za pasjonujący wykład, po którym posypał się grad pytań.
