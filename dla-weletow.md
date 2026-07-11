@@ -7,4 +7,4 @@ title: Portal Welecki
 # excerpt: "Podstawą Welecji jest dewiza Viribus Unitis Suum Cuique - co w języku polskim znaczy wspólnymi siłami każdemu oddać co mu się należy."
 ---
 
-[Portal](https://docs.google.com/document/d/1lKm1TI5e9GwDjd3MSf5tPiYcbRvQcDPi0DgGJ6QdaCU/edit?usp=drive_link)
+[Portal](https://docs.google.com/document/d/1tqRIx9gVz6ja8K8I1Pk4qXGdX-p_WpNBv2AeSTmsMy4/edit?usp=sharing)
