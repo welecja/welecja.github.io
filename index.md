@@ -1,5 +1,5 @@
 ---
-title: Welecja
+title: Korporacja Akademicka Welecja
 # feature_text: |
 #   ##  Korporacja Akademicka Welecja
 # Korporacja Akademicka
