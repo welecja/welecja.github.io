@@ -20,3 +20,15 @@ Przy Welecji kandydowały korporacje: Chrobacja, Audacja, Legetia oraz Virtutia.
 W czasie wojny Weleci spotykali się w kraju, w niewoli i na emigracji. Przyjęto wtedy ostatnich przed 2002 r. członków korporacji. Komersze Welecji odbywały się nawet w oflagu w Woldenbergu. Wielu Weletów wzięło czynny udział w walkach na wszystkich frontach wojny składając ofiarę życia.
 
 W okresie powojennym odbywały się konspiracyjne komersze i spotkania Welecji. Chociaż oficjalnie funkcjonować nie mogła, Welecja nigdy nie zaprzestała swojej działalności. W 1983 r. w Londynie i Warszawie odbyły się uroczyste obchody 100-lecia powstania korporacji. W 1979 r. w kościele Najświętszego Zbawiciela w Warszawie odsłonięto tablicę upamiętniającą “zmarłych, pomordowanych i poległych za Ojczyznę” Weletów, a w 1988 r. na ścianach kościoła pw. św. Karola Boromeusza na warszawskich Powązkach tablicę epitafijną Weletów pomordowanych na Wschodzie. W 1989 r. ukazała się księga pamiątkowa Polska Korporacja Akademicka Welecja 1883-1988 (”Księga 100-lecia Welecji”).
+
+Z życiorysami wybitnych Weletów można zapoznać się w [Albumie Veletorum](/album-veletorum/).
+
+## Dom Welecki
+
+Dom Welecki przy ul. Chocimskiej 4 został zaprojektowany przez fil. Edmunda Michałowskiego w pracowni fil. fil. Franciszka Lilpopa i Karola Jankowskiego i wzniesiony ze składek filistrów Welecji. Była to przedwojenna kwatera korporacji. Budynek został przejęty przez państwo na podstawie dekretu Bieruta i obecnie znajduje się w rękach osoby prywatnej.
+
+{% include figure.html image="/assets/images/dom-welecki.jpg" caption="Dom Welecki przy ul. Chocimskiej 4 na przedwojennej fotografii" width="655" %}
+
+## Archiwum Welecji
+
+Zbiór archiwalny korporacji uległ całkowitemu zniszczeniu w czasie II wojny światowej — obecny zespół (1883–2010, 122 jednostki archiwalne) tworzą prywatne kolekcje pozyskane po wojnie od Weletów i ich rodzin. Jego zawartość opisuje [Inwentarz zespołu Korporacja Akademicka Welecja](/assets/documents/inwentarz-zespolu-welecja.docx) (DOCX). Stara strona internetowa Welecji jest w całości dostępna w [Archiwum](https://www.welecja.pl/welecja-archive/welecja-pre2023/welecja.pl/index.html).

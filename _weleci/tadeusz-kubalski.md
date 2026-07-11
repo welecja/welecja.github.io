@@ -1,0 +1,7 @@
+---
+title: "Tadeusz Kubalski"
+sort_name: kubalski-tadeusz
+---
+Urodzony w Będzinie, uczył się w Warszawie w Szkole im. J. Zamoyskiego i tam zdał maturę w roku 1922. Studiował architekturę w Politechnice Warszawskiej do roku 1928. Przyjęty do Welecji w 1924 roku pełnił różne funkcje, do prezesury Koła włącznie. Niezależnie od zajmowanych stanowisk poświęcał Korporacji wiele czasu, będąc "duszą" wszystkich ważniejszych poczynań z przeprowadzkami i urządzaniem Kwatery włącznie. W pojedynku, kończącym sprawę honorową z Korporacją Wandeą, wyznaczony w drodze losowania, stawał reprezentując Welecję. W latach 1924-32 pracował w Warszawskiej Spółdzielni Mieszkaniowej w nadzorze, następnie jako grafik i projektant architektoniczny. Służbę wojskową, w Szkole Podchorążych Rezerwy Artylerii we Włodzimierzu Wołyńskim odbył w latach 1932/33. W kampanii 1939 roku bił się w bitwie pod Kockiem. Wzięty do niewoli wojnę spędził w "Oflagu", w Murnau. W tym okresie był jednym z organizatorów teatru obozowego jako scenarzysta i aktor. Nawiązał przy tym kontakt ze znanym reżyserem, Szylerem, który skierował go po wyzwoleniu do pracy w teatrze. Po wyzwoleniu 3 lata przebywał w Anglii a po powrocie do Kraju (pracował) jako aktor.
+
+W 1949 roku wstąpił do Szkoły Dramatycznej, którą ukończył w 1953 roku z dyplomem reżysera. Występował początkowo jako aktor w teatrach warszawskich, potem w Kielcach i Radomiu. Przez lata 1957-1963 był dyrektorem i kierownikiem artystycznym teatru państwowego w Kaliszu, gdzie zmarł 5 VIII 1963 r.

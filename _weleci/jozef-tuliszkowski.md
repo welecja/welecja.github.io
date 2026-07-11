@@ -1,0 +1,10 @@
+---
+title: "Józef Tuliszkowski"
+years: "1870–1942"
+sort_name: tuliszkowski-jozef
+---
+Pochodził z rodziny ziemiańskiej, osiadłej na Wołyniu. Gimnazjum ukończył w Rydze i tam studiował na Politechnice w latach 1891-1897, uzyskując dyplom inżyniera mechanika. W tych latach był członkiem Welecji, której losami żywo interesował się w późniejszych czasach, w Warszawie; swoje przywiązanie do barw przejawiał m.in. w używaniu na codzień różnych drobnych odznak Stowarzyszenia. Wcześnie, bo już w czasie studiów ujawnił zainteresowanie pożarnictwem, co stało się jego życiową pasją. Należał do miejscowej straży ogniowej i czynnie brał udział w jej akcjach; uprawiał też z zamiłowaniem yachting morski.
+
+Po ukończeniu studiów pracował w Kijowie w przedsiębiorstwach instalacyjnych do 1903 roku, kiedy utworzył prywatne biuro techniczne. Następnie - do roku 1909 - kierował fabryką wyrobów drewnianych w Zwierzyńcu k/Zamościa. Po przesiedleniu się do Warszawy - wierny swej pasji - zaangażował się w charakterze naczelnego instruktora w Stowarzyszeniu Ochrony Przeciwpożarowej "Snop", agendzie Centralnego Towarzystwa Rolniczego /CTR/. Ewakuowany wraz z instytucją, w 1915 roku w głąb Rosji, mógł powrócić do Warszawy dopiero w 1918 roku. W Polsce niepodległej, natychmiast po powrocie do kraju zajął w pożarnictwie czołowe miejsce. Był, w paru nawrotach, komendantem Warszawskiej Straży Ogniowej i współorganizatorem sieci ochotniczych straży ogniowych w małych miasteczkach a nawet wsiach. Mimo zaawansowanego wieku przeszedł przeszkolenie wojskowe i został mianowany szefem W-łu Pożarnictwa w Ministerstwie Spraw Wojskowych, w. randze ppułkownika.
+
+Założył jako współwłaściciel firmę "Strażak" wytwarzającą sprzęt i narzędzia pożarnicze. Zaprojektował konstrukcję samochodowych drabin pożarniczych, rozsuwanych do wysokości 18 metrów. Dwa wyprodukowane egzemplarze takich drabin zdały pozytywnie egzamin w miejskich strażach ogniowych Piotrkowa Trybunalskiego i Radomia. Wydał cenny, wielotomowy podręcznik pożarnictwa. Zabierał głos w prasie, jako znawca przedmiotu.

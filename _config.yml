@@ -64,10 +64,14 @@ collections:
   posts:
     title: Aktualności # Needed for Siteleaf
     output: true
-    # description: "Aktualności Weleckie" # The post list page content
+    description: "Archiwalne aktualności z lat 2006–2020 zostały przeniesione ze starej strony welecja.pl — pełny spis wszystkich wpisów według roczników znajduje się w [Kronice](/kronika/)."
     # feature_text: |
     #   Welcome to the blog
     # feature_image: "/assets/images/140lecie.jpg"
+  weleci:
+    title: Album Veletorum
+    output: true
+    permalink: /album-veletorum/:name/
 
 # 6. Jekyll collections settings
 defaults:
@@ -88,6 +92,13 @@ defaults:
       type: "pages"
     values:
       layout: page # Set the default layout for pages
+  -
+    scope:
+      path: ""
+      type: "weleci"
+    values:
+      layout: page # Biograms from the Album Veletorum render as plain pages
+      aside: false
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
@@ -119,8 +130,12 @@ navigation_header:
     url: /
   - title: Podstawy
     url: /podstawy/
+  - title: Tradycje
+    url: /tradycje/
   - title: Historia
     url: /historia/
+  - title: Album Veletorum
+    url: /album-veletorum/
   - title: Kartele
     url: /kartele/
   - title: Archiwum&nbsp;&#8599;&#xFE0E;
