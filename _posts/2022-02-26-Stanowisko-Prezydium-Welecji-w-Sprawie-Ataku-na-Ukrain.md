@@ -2,5 +2,4 @@
 title: Stanowisko Prezydium Welecji w Sprawie Ataku na Ukrainę
 ---
 
-Przedstawiamy stanowisko Prezydium Korporacji Akademickiej Welecja w sprawie ataku na Ukrainę dokonanego przez Rosję.
-
+Prezydium Korporacji Akademickiej Welecja wydało stanowisko w sprawie ataku dokonanego przez Rosję na Ukrainę.
