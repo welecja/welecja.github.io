@@ -494,3 +494,28 @@ pre code {
     overflow-x: scroll;
   }
 }
+// Homepage: the long title "Korporacja Akademicka Welecja" gets one size down
+// so it sits cleanly beside the cyrkiel instead of wrapping at display size.
+.korporacja-akademicka-welecja .article--page h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+
+  &::before {
+    content: '';
+    background: url('/assets/logos/cyrkiel-sm.png') no-repeat center / contain;
+    width: 3.2rem;
+    height: 4rem;
+    flex: 0 0 auto;
+    margin-right: .9rem;
+  }
+
+  @media (max-width: 639px) {
+    font-size: 1.5rem;
+
+    &::before {
+      width: 2.6rem;
+      height: 3.2rem;
+      margin-right: .7rem;
+    }
+  }
+}

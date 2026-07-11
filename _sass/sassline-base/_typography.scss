@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1::before {
-  content: url(../../assets/logos/cyrkiel-sm.png);
+  content: url(/assets/logos/cyrkiel-sm.png);
   display: block; /* Make the pseudo-element a block-level element */
   margin-right: 10px; /* Add some space between the image and the text */
 }
