@@ -77,6 +77,11 @@ collections:
 defaults:
   -
     scope:
+      path: "assets/documents/spiewnik"
+    values:
+      sitemap: false # per-song PDFs: keep out of sitemap.xml
+  -
+    scope:
       path: ""
     values:
       image: "/assets/default-social-image.png" # Default image for sharing

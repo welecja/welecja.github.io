@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+
+  <article class="article  article--page  content  typeset">
+
+    <p class="song__back"><a href="../">&larr; Śpiewnik</a></p>
+
+    <h1>{{ page.title }}</h1>
+
+    {% for rec in page.recordings %}
+    <div class="song__rec">
+      {% if rec.note %}<p class="song__rec-note">{{ rec.note }}</p>{% endif %}
+      <audio class="song__player" controls preload="metadata" src="{{ rec.src | relative_url }}">
+        Twoja przeglądarka nie obsługuje odtwarzacza audio.
+        <a href="{{ rec.src | relative_url }}">Pobierz nagranie</a>.
+      </audio>
+    </div>
+    {% endfor %}
+
+    {% if page.scores %}
+    <h2>Nuty</h2>
+    <div class="song__scores">
+      {% for score in page.scores %}
+      {% assign score_url = score | relative_url %}
+      <a href="{{ score_url }}"><img class="song__score" src="{{ score_url }}" alt="Nuty — {{ page.title }}, strona {{ forloop.index }}" loading="lazy"></a>
+      {% endfor %}
+    </div>
+    {% if page.pdf %}<p><a class="button" href="{{ page.pdf | relative_url }}">Pobierz nuty (PDF)</a></p>{% endif %}
+    {% endif %}
+
+    {% if page.lyrics %}
+    <h2>Tekst pieśni</h2>
+    <div class="song__lyrics-text">{{ page.lyrics | escape | newline_to_br }}</div>
+    {% endif %}
+
+    {{ content }}
+
+    <p class="song__copyright">Nagrania, nuty i teksty: © Korporacja Akademicka Welecja. Wszelkie prawa zastrzeżone.</p>
+
+  </article>
+
+</main>
+
+{% include site-footer.html %}
+
+<style>
+  .song__back { margin-bottom: 0; }
+  .song__rec { margin: .8rem 0; }
+  .song__rec-note { margin-bottom: .2rem; font-size: .85em; color: #666; }
+  .song__player { display: block; width: 100%; max-width: 36rem; }
+  .song__score { display: block; width: 100%; max-width: 36rem; border: 1px solid #e4e4e4; margin: 0 0 1.2rem; }
+  .song__lyrics-text { max-width: 36rem; padding: .2rem 0 .2rem 1.2rem; border-left: 3px solid #e0e0e0; }
+  .song__copyright { margin-top: 2.8rem; font-size: .8em; color: #888; }
+</style>
+<script>
+  // gdy zaczyna grać jedno nagranie, zatrzymaj pozostałe
+  document.addEventListener('play', function (e) {
+    if (e.target.tagName !== 'AUDIO') return;
+    document.querySelectorAll('audio').forEach(function (a) {
+      if (a !== e.target) a.pause();
+    });
+  }, true);
+</script>
