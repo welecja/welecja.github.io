@@ -8,7 +8,7 @@ excerpt: "Śpiewnik Welecki — nagrania, nuty i teksty pieśni oficjalnych i to
 
 <a href="{{ '/dla-weletow/' | relative_url }}">&larr; Portal Welecki</a>
 
-Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po komersze. Poniżej znajduje się pełny spis pieśni ze Śpiewnika Weleckiego; przy każdej pieśni dostępne są nuty i tekst, a przy części także nagranie.
+Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po komersze. Poniżej znajduje się pełny spis pieśni ze Śpiewnika Weleckiego (Warszawa 2010, red. Władysław Jóźwicki); przy każdej pieśni dostępne są nuty i tekst, a przy części także nagranie.
 
 <div class="song-search">
   <input class="song-search__input" id="song-search" type="search" placeholder="Szukaj — tytuł lub fragment tekstu…" oninput="filtrujPiesni()" autocomplete="off">
@@ -34,7 +34,7 @@ Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po 
   </ul>
 </div>
 
-<p class="song__copyright">© Korporacja Akademicka Welecja</p>
+<p class="song__copyright">© Korporacja Akademicka Welecja · <a href="{{ '/bardzo-tajny-link-do-spiewnika-haslo1883/o-spiewniku/' | relative_url }}">O śpiewniku</a></p>
 
 <style>
   .song-search { margin: 1.6rem 0; max-width: 30rem; }
