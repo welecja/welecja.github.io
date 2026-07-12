@@ -13,7 +13,6 @@ recordings:
 scores:
   - /assets/images/spiewnik/nuty/nie-tak-to-illo-tempore-bywalo-1.png
   - /assets/images/spiewnik/nuty/nie-tak-to-illo-tempore-bywalo-2.png
-  - /assets/images/spiewnik/nuty/nie-tak-to-illo-tempore-bywalo-3.png
 pdf: /assets/documents/spiewnik/nie-tak-to-illo-tempore-bywalo.pdf
 lyrics: |
   1. Nie tak to illo tempore bywało

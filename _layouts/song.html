@@ -37,6 +37,16 @@ layout: default
     <div class="song__lyrics-text">{{ page.lyrics | escape | newline_to_br }}</div>
     {% endif %}
 
+    {% if page.archiwalia %}
+    <h2>Z archiwum</h2>
+    <div class="song__scores">
+      {% for scan in page.archiwalia %}
+      {% assign scan_url = scan | relative_url %}
+      <a href="{{ scan_url }}"><img class="song__score" src="{{ scan_url }}" alt="Materiał archiwalny — {{ page.title }}" loading="lazy"></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {{ content }}
 
     <p class="song__copyright">Nagrania, nuty i teksty: © Korporacja Akademicka Welecja. Wszelkie prawa zastrzeżone.</p>

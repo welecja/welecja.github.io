@@ -12,7 +12,6 @@ recordings:
   - src: /assets/audio/spiewnik/oficjalne/hymn-jagiellonii.mp3
 scores:
   - /assets/images/spiewnik/nuty/hymn-jagiellonii-1.png
-  - /assets/images/spiewnik/nuty/hymn-jagiellonii-2.png
 pdf: /assets/documents/spiewnik/hymn-jagiellonii.pdf
 lyrics: |
   1. Choć burza huczy wokół nas,
