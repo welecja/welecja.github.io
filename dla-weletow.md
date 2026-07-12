@@ -32,17 +32,33 @@ Nagrania, nuty i teksty pieśni weleckich. Dostęp na hasło.
   .gate__error { color: #a33; margin-top: .8rem; }
 </style>
 <script>
-  async function sprawdzHaslo(e) {
-    e.preventDefault();
-    var pw = document.getElementById('gate-haslo').value.trim();
+  // brama: adres docelowy zaszyfrowany AES-GCM kluczem z hasła (PBKDF2);
+  // poprawne hasło = udane odszyfrowanie, adres nie występuje w źródle strony
+  var GATE_ENTRIES = [
+    {"salt":"LJmQzQCvXU+DgIF1ev9fkg==","iv":"Vwz3PblmXEmstb2n","ct":"EUvpLACoQ/tQLVAFYcJjlW9F4qMTZdQPfAkgZKcwzrj+OerNTVsrbMuQMONVoroxABDqV3EiEkSG8Q=="},
+    {"salt":"w/qg/yCTq/RBLrRZTYVcCA==","iv":"a6YWM2sDAT2PUYzJ","ct":"l/B2ZptMebO+V/3H4y0+/xzzdeoNCi+4nbVVwc4ZGFhgLIdYhxMgkXEJzck2jV9WiAIcdiRjiX4jAg=="}
+  ];
+  function b2u(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  async function odszyfruj(pw, e) {
+    try {
+      var enc = new TextEncoder();
+      var km = await crypto.subtle.importKey('raw', enc.encode(pw), 'PBKDF2', false, ['deriveKey']);
+      var key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: b2u(e.salt), iterations: 100000, hash: 'SHA-256' },
+        km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      var pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b2u(e.iv) }, key, b2u(e.ct));
+      return new TextDecoder().decode(pt);
+    } catch (err) { return null; }
+  }
+  async function sprawdzHaslo(ev) {
+    ev.preventDefault();
+    var pw = document.getElementById('gate-haslo').value.trim().toLowerCase();
     var err = document.getElementById('gate-error');
-    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
-    var hex = Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
-    if (hex === 'f804663d999ea924c7537b90bfa97955add47fb390ccda98c0ea1647c48b782c') {
-      window.location.href = '{{ site.baseurl }}' + atob('L2JhcmR6by10YWpueS1saW5rLWRvLXNwaWV3bmlrYS1oYXNsbw==') + pw + '/';
-    } else {
-      err.hidden = false;
+    for (var i = 0; i < GATE_ENTRIES.length; i++) {
+      var target = await odszyfruj(pw, GATE_ENTRIES[i]);
+      if (target) { window.location.href = '{{ site.baseurl }}' + target; return false; }
     }
+    err.hidden = false;
     return false;
   }
 </script>
