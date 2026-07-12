@@ -34,7 +34,7 @@ Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po 
   </ul>
 </div>
 
-<p class="song__copyright">Nagrania, nuty i teksty: © Korporacja Akademicka Welecja. Wszelkie prawa zastrzeżone.</p>
+<p class="song__copyright">© Korporacja Akademicka Welecja</p>
 
 <style>
   .song-search { margin: 1.6rem 0; max-width: 30rem; }
