@@ -8,28 +8,28 @@ excerpt: "Materiały dla Weletów — Portal Welecki i Śpiewnik."
 
 ## Portal Welecki
 
-Dokumenty wewnętrzne Korporacji — komunikaty, protokoły i sprawy bieżące. Dostęp mają Weleci należący do Grupy Google.
+Portal wewnętrzny dla członków Welecji.
 
-{% include button.html text="Wejdź do Portalu" link="https://docs.google.com/document/d/1tqRIx9gVz6ja8K8I1Pk4qXGdX-p_WpNBv2AeSTmsMy4/edit?usp=sharing" %}
+{% include button.html text="Przejdź do Portalu" link="https://docs.google.com/document/d/1tqRIx9gVz6ja8K8I1Pk4qXGdX-p_WpNBv2AeSTmsMy4/edit?usp=sharing" %}
 
 ## Śpiewnik
 
-Nagrania, nuty i teksty pieśni weleckich — od pieśni oficjalnych po komersowe. Dostęp na hasło.
+Nagrania, nuty i teksty pieśni weleckich. Dostęp na hasło.
 
 <form class="gate" onsubmit="return sprawdzHaslo(event)">
   <input class="gate__input" id="gate-haslo" type="password" placeholder="Hasło" autocomplete="off">
-  <button class="button" type="submit">Wejdź do Śpiewnika</button>
+  <button class="button" type="submit">Przejdź do Śpiewnika</button>
   <p class="gate__error" id="gate-error" hidden>Nieprawidłowe hasło.</p>
 </form>
 
 <style>
-  .gate { margin: 1.2rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; max-width: 30rem; }
+  .gate { margin: 1.2rem 0; max-width: 24rem; }
   .gate__input {
-    flex: 1 1 10rem; padding: .55rem .8rem;
+    display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
     font: inherit; border: 1px solid #ccc; border-radius: 2px;
   }
   .gate__input:focus { outline: none; border-color: #005248; }
-  .gate__error { color: #a33; flex-basis: 100%; margin: 0; }
+  .gate__error { color: #a33; margin-top: .8rem; }
 </style>
 <script>
   async function sprawdzHaslo(e) {
