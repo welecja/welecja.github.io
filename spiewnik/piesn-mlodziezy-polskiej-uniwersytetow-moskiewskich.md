@@ -4,7 +4,7 @@ title: "Pieśń młodzieży polskiej uniwersytetów moskiewskich"
 song: true
 section: towarzyskie
 order: 183
-permalink: /spiewnik-54sro/piesn-mlodziezy-polskiej-uniwersytetow-moskiewskich/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-mlodziezy-polskiej-uniwersytetow-moskiewskich/
 sitemap: false
 indexing: false
 excerpt: "Pieśń młodzieży polskiej uniwersytetów moskiewskich — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

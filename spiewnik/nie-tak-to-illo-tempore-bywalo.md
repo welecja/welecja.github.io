@@ -4,7 +4,7 @@ title: "Nie tak to illo tempore bywało"
 song: true
 section: towarzyskie
 order: 105
-permalink: /spiewnik-54sro/nie-tak-to-illo-tempore-bywalo/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/nie-tak-to-illo-tempore-bywalo/
 sitemap: false
 indexing: false
 excerpt: "Nie tak to illo tempore bywało — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

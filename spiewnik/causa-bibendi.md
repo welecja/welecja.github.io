@@ -4,7 +4,7 @@ title: "Causa bibendi"
 song: true
 section: towarzyskie
 order: 199
-permalink: /spiewnik-54sro/causa-bibendi/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/causa-bibendi/
 sitemap: false
 indexing: false
 excerpt: "Causa bibendi — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Kurdesz"
 song: true
 section: towarzyskie
 order: 93
-permalink: /spiewnik-54sro/kurdesz/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/kurdesz/
 sitemap: false
 indexing: false
 excerpt: "Kurdesz — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Filisterskie Gaudeamus"
 song: true
 section: towarzyskie
 order: 35
-permalink: /spiewnik-54sro/filisterskie-gaudeamus/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/filisterskie-gaudeamus/
 sitemap: false
 indexing: false
 excerpt: "Filisterskie Gaudeamus — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

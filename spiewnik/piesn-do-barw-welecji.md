@@ -4,7 +4,7 @@ title: Pieśń do barw Welecji
 song: true
 section: oficjalne
 order: 10
-permalink: /spiewnik-54sro/piesn-do-barw-welecji/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-do-barw-welecji/
 sitemap: false
 indexing: false
 excerpt: "Pieśń do barw Welecji — nagranie, nuty i tekst."

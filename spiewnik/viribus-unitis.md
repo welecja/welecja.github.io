@@ -4,7 +4,7 @@ title: "Viribus unitis"
 song: true
 section: oficjalne
 order: 67
-permalink: /spiewnik-54sro/viribus-unitis/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/viribus-unitis/
 sitemap: false
 indexing: false
 excerpt: "Viribus unitis, suum cuique — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: O jerum, jerum
 song: true
 section: towarzyskie
 order: 169
-permalink: /spiewnik-54sro/o-jerum-jerum/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/o-jerum-jerum/
 sitemap: false
 indexing: false
 excerpt: "O jerum, jerum — nagranie, nuty i tekst."

@@ -4,7 +4,7 @@ title: "Hymn Konwentu Polonia — „Część Polskiej Ziemi”"
 song: true
 section: oficjalne
 order: 12
-permalink: /spiewnik-54sro/hymn-konwentu-polonia-czesc-polskiej-ziemi/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hymn-konwentu-polonia-czesc-polskiej-ziemi/
 sitemap: false
 indexing: false
 excerpt: "Cześć Polskiej Ziemi, hymn K! Konwent Polonia — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

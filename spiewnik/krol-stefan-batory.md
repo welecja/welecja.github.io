@@ -4,7 +4,7 @@ title: "Nasz Stefan Batory"
 song: true
 section: towarzyskie
 order: 102
-permalink: /spiewnik-54sro/krol-stefan-batory/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/krol-stefan-batory/
 sitemap: false
 indexing: false
 excerpt: "Nasz Stefan Batory (Polonez) — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

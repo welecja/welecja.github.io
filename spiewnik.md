@@ -1,6 +1,6 @@
 ---
 title: Śpiewnik
-permalink: /spiewnik-54sro/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/
 sitemap: false
 indexing: false
 excerpt: "Śpiewnik Welecki — nagrania, nuty i teksty pieśni oficjalnych i towarzyskich Korporacji Akademickiej Welecja."

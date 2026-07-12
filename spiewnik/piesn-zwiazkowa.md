@@ -4,7 +4,7 @@ title: "Pieśń związkowa"
 song: true
 section: towarzyskie
 order: 46
-permalink: /spiewnik-54sro/piesn-zwiazkowa/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-zwiazkowa/
 sitemap: false
 indexing: false
 excerpt: "Pieśń związkowa — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

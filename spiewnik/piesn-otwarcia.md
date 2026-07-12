@@ -4,7 +4,7 @@ title: "Pieśń otwarcia"
 song: true
 section: towarzyskie
 order: 25
-permalink: /spiewnik-54sro/piesn-otwarcia/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-otwarcia/
 sitemap: false
 indexing: false
 excerpt: "Pieśń otwarcia — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

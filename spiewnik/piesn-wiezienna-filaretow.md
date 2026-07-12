@@ -4,7 +4,7 @@ title: "Pieśń więzienna Filaretów"
 song: true
 section: towarzyskie
 order: 60
-permalink: /spiewnik-54sro/piesn-wiezienna-filaretow/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-wiezienna-filaretow/
 sitemap: false
 indexing: false
 excerpt: "Pieśń więzienna Filaretów — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

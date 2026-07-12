@@ -4,7 +4,7 @@ title: "Pieśń zbratania"
 song: true
 section: oficjalne
 order: 27
-permalink: /spiewnik-54sro/piesn-zbratania/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-zbratania/
 sitemap: false
 indexing: false
 excerpt: "Pieśń zbratania (Pieśń sztychowania) — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Rozmowa pijaka z księżycem"
 song: true
 section: towarzyskie
 order: 259
-permalink: /spiewnik-54sro/rozmowa-pijaka-z-ksiezycem/
+permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/rozmowa-pijaka-z-ksiezycem/
 sitemap: false
 indexing: false
 excerpt: "Rozmowa pijaka z księżycem — nagranie, nuty i tekst ze Śpiewnika Weleckiego."
