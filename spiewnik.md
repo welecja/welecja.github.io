@@ -6,6 +6,8 @@ indexing: false
 excerpt: "Śpiewnik Welecki — nagrania, nuty i teksty pieśni oficjalnych i towarzyskich Korporacji Akademickiej Welecja."
 ---
 
+<a href="{{ '/bardzo-tajny-portal-welecki-haslo1883/' | relative_url }}">&larr; Portal Welecki</a>
+
 Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po komersze. Poniżej znajduje się spis pieśni ze Śpiewnika Weleckiego; przy każdej pieśni dostępne są nagranie, nuty oraz tekst.
 
 ## Pieśni oficjalne
