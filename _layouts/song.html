@@ -30,7 +30,6 @@ layout: default
       <a href="{{ score_url }}"><img class="song__score" src="{{ score_url }}" alt="Nuty — {{ page.title }}, strona {{ forloop.index }}" loading="lazy"></a>
       {% endfor %}
     </div>
-    {% if page.pdf %}<p><a class="button" href="{{ page.pdf | relative_url }}">Pobierz nuty (PDF)</a></p>{% endif %}
     {% endif %}
 
     {% if page.lyrics %}
