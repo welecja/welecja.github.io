@@ -6,8 +6,6 @@ aside: false
 
 fil. dr Tymoteusz Pawłowski
 
-**Od 28 do 30 czerwca 2019 w Warszawie odbywa się Komersz Narodów Bałtyckich. Jego organizatorem jest Korporacja Akademicka Welecja – korporacja szczególna, inna niż wszystkie.**
-
 Dla zrozumienia idei korporacji akademickich trzeba się cofnąć do XIX wieku, gdy powstawały nowe szkoły wyższe, najczęściej – dla zachowania odpowiedniego poziomu nauczania – niezależne od państwa. Autonomia oznaczała wówczas i to, że dyscypliny studentów nie mogli pilnować policjanci i państwowe sądy, tylko władze akademickie. I wówczas pojawiły się korporacje akademickie, które narzuciły swoim członkom odpowiednią dyscyplinę. Wszyscy byli zadowoleni: zarówno rektorzy i profesorowie, którzy zrzucili ze swoich barków przykry obowiązek, jak i studenci, dla których zasady korporacyjne były jednak wygodniejsze niż pałka pedla, czy też areszt akademicki.
 
 Istniała bowiem nawet taka instytucja, do której decyzją ciała profesorskiego wtrącano co krnąbrniejszych studentów. W dawnej Politechnice Ryskiej – dziś jest to Państwowy Uniwersytet Łotewski – jej pomieszczenie zachowało się do dziś. Niedawno zostało odrestaurowane – także wysiłkiem państwa polskiego, gdyż Polacy stanowili 1/3 studentów tej uczelni.
