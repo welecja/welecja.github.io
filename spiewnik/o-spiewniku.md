@@ -23,10 +23,6 @@ Cyfrowa wersja śpiewnika powstała na podstawie wydania: *Śpiewnik welecki*, p
 - *Herb Welecji (akwarela)* — Tomasz Kucharski
 - *Projekt, skład nut i łamanie tekstu* — Maciej Przepióra www.phoibos.pl
 
-Wydano przy wsparciu finansowym Cardif Polska S.A.
-
-ISBN 978-83-922410-1-0 · Nakład 500 egz.
-
 ## Słowo wstępne
 
 > „Płomień rozgryzie malowane dzieje,  
