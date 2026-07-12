@@ -34,11 +34,6 @@ Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po 
   </ul>
 </div>
 
-## Z archiwum
-
-{% assign scan1 = '/assets/images/spiewnik/piesn-welecka.jpg' | relative_url %}
-{% include figure.html image=scan1 caption="„Pieśń welecka” — karta z dawnego śpiewnika" %}
-
 <p class="song__copyright">Nagrania, nuty i teksty: © Korporacja Akademicka Welecja. Wszelkie prawa zastrzeżone.</p>
 
 <style>
