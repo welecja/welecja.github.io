@@ -1,3 +1,9 @@
+---
+title: false
+sitemap: false
+indexing: false
+---
+
 # Śpiewnik Welecki — nagrania
 
 24 nagrania (MP3 VBR ~190 kbps, przekonwertowane z oryginalnych WAV; oryginały przechowywane poza repo).
