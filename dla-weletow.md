@@ -8,3 +8,5 @@ title: Portal Welecki
 ---
 
 [Portal](https://docs.google.com/document/d/1tqRIx9gVz6ja8K8I1Pk4qXGdX-p_WpNBv2AeSTmsMy4/edit?usp=sharing)
+
+[Śpiewnik](/spiewnik/) — nagrania, nuty i teksty pieśni weleckich (dostęp na hasło)
