@@ -9,6 +9,8 @@
  * Motyw i rozmiar tekstu zapamiętuje i nakłada window.spiewnik ze skryptu
  * w nagłówku strony (_includes/spiewnik-head.html) — tam, bo ustawienie musi
  * stać na <html> przed pierwszym malowaniem. Tu jest tylko panel do nich.
+ * Tam też, i z tego samego powodu, stawiana jest klasa spiewnik-samodzielna,
+ * po której arkusz poznaje zainstalowaną aplikację.
  */
 (function () {
   'use strict';
@@ -23,6 +25,24 @@
   // Pięć kroków od 85% do 150%. Mniej niż 85% robi z tekstu pieśni druk
   // ulotny, więcej niż 150% łamie dwuwierszowe refreny na telefonie.
   var ROZMIARY = [85, 100, 115, 130, 150];
+  // Na ekranie każdy krok to samo „A” — czym się różnią, widać po wielkości,
+  // a czytnik ekranu dowiaduje się tego z aria-label.
+  var NAZWY_ROZMIARU = ['Najmniejszy', 'Domyślny', 'Większy', 'Jeszcze większy', 'Największy'];
+
+  // Rysunki kreską w barwie tekstu przycisku: słońce dla jasnego motywu,
+  // księżyc dla ciemnego. Grubość kreski i wielkość nadaje arkusz, żeby te
+  // znaki dało się poprawić bez ruszania skryptu.
+  var IKONA_MOTYWU = {
+    light: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+      + '<circle cx="12" cy="12" r="4.2"/>'
+      + '<path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3'
+      + 'M5.7 5.7l1.6 1.6M16.7 16.7l1.6 1.6M18.3 5.7l-1.6 1.6M7.3 16.7l-1.6 1.6"/>'
+      + '</svg>',
+    dark: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+      + '<path d="M20.4 14.7A8.6 8.6 0 0 1 9.3 3.6 8.6 8.6 0 1 0 20.4 14.7Z"/>'
+      + '</svg>'
+  };
+  var NAZWA_MOTYWU = { light: 'Jasny', dark: 'Ciemny' };
   // Nagrania, nuty, PDF-y i skany archiwalne wskazane w spisie pieśni ważą
   // razem 136 MiB w 301 plikach — czyli około 143 MB tak, jak liczy je operator.
   // Liczbę podajemy okrągłą: dokładna zmieni się przy pierwszym dogranym
@@ -40,7 +60,9 @@
   var stanMediow = null;
   var przyciskPobierz = null;
   var przyciskUsun = null;
-  var wartoscRozmiaru = null;
+  var przyciskMotywu = null;
+  var ikonaMotywu = null;
+  var nazwaMotywu = null;
 
   var mediaStan = null;   // odpowiedź SPIEWNIK_MEDIA_STATUS albo null, póki nie przyszła
   var postep = null;      // ostatnie SPIEWNIK_PROGRESS w trakcie pobierania
@@ -58,6 +80,17 @@
     return najblizszy;
   }
 
+  /** Pięć przycisków „A”, każdy narysowany w wielkości, którą nastawia. */
+  function krokiRozmiaru() {
+    var html = '';
+    for (var i = 0; i < ROZMIARY.length; i++) {
+      html += '<button type="button" class="spiewnik-ust__krok" data-rozmiar="' + ROZMIARY[i]
+        + '" aria-pressed="false" aria-label="' + NAZWY_ROZMIARU[i]
+        + ' (' + ROZMIARY[i] + '%)">A</button>';
+    }
+    return html;
+  }
+
   function zbudujUstawienia() {
     if (!artykul || !ust) return null;
     var element = document.createElement('div');
@@ -66,21 +99,24 @@
       + ' aria-expanded="false" aria-controls="spiewnik-ust-panel">Ustawienia</button>'
       + '<div class="spiewnik-ust__panel" id="spiewnik-ust-panel" hidden>'
 
+      // Jeden przycisk zamiast trzech: motywy są dwa, a przycisk pokazuje ten,
+      // w którym się właśnie jest — znakiem i słowem naraz.
       + '<div class="spiewnik-ust__wiersz">'
       + '<span class="spiewnik-ust__etykieta" id="spiewnik-ust-motyw">Motyw</span>'
-      + '<span class="spiewnik-ust__grupa" role="group" aria-labelledby="spiewnik-ust-motyw">'
-      + '<button type="button" class="spiewnik-ust__opcja" data-motyw="auto">Auto</button>'
-      + '<button type="button" class="spiewnik-ust__opcja" data-motyw="light">Jasny</button>'
-      + '<button type="button" class="spiewnik-ust__opcja" data-motyw="dark">Ciemny</button>'
-      + '</span>'
+      + '<button type="button" class="spiewnik-ust__motyw" aria-pressed="false"'
+      + ' aria-labelledby="spiewnik-ust-motyw spiewnik-ust-motyw-nazwa">'
+      + '<span class="spiewnik-ust__ikona"></span>'
+      + '<span class="spiewnik-ust__nazwa" id="spiewnik-ust-motyw-nazwa"></span>'
+      + '</button>'
       + '</div>'
 
+      // Rozmiaru tekstu nie da się obejrzeć przez „A−  100%  A+”: liczba mówi
+      // o ile, ale nie jak. Pięć zrośniętych kroków pokazuje całą skalę naraz,
+      // a wybrany jest tym, który jest wypełniony.
       + '<div class="spiewnik-ust__wiersz">'
       + '<span class="spiewnik-ust__etykieta" id="spiewnik-ust-rozmiar">Rozmiar tekstu</span>'
-      + '<span class="spiewnik-ust__grupa" role="group" aria-labelledby="spiewnik-ust-rozmiar">'
-      + '<button type="button" class="spiewnik-ust__opcja" data-krok="-1" aria-label="Mniejszy tekst">A&minus;</button>'
-      + '<span class="spiewnik-ust__wartosc" aria-live="polite">100%</span>'
-      + '<button type="button" class="spiewnik-ust__opcja" data-krok="1" aria-label="Większy tekst">A+</button>'
+      + '<span class="spiewnik-ust__kroki" role="group" aria-labelledby="spiewnik-ust-rozmiar">'
+      + krokiRozmiaru()
       + '</span>'
       + '</div>'
 
@@ -104,7 +140,9 @@
     stanMediow = element.querySelector('.spiewnik-ust__stan--media');
     przyciskPobierz = element.querySelector('.spiewnik-ust__pobierz');
     przyciskUsun = element.querySelector('.spiewnik-ust__usun');
-    wartoscRozmiaru = element.querySelector('.spiewnik-ust__wartosc');
+    przyciskMotywu = element.querySelector('.spiewnik-ust__motyw');
+    ikonaMotywu = element.querySelector('.spiewnik-ust__ikona');
+    nazwaMotywu = element.querySelector('.spiewnik-ust__nazwa');
 
     przelacznik.addEventListener('click', function () {
       var otwieramy = panel.hidden;
@@ -136,18 +174,14 @@
       zamknijPanel();
     });
 
-    element.querySelectorAll('[data-motyw]').forEach(function (przycisk) {
-      przycisk.addEventListener('click', function () {
-        ust.zapisz(przycisk.getAttribute('data-motyw'), ust.rozmiar);
-        odswiezWybory();
-      });
+    przyciskMotywu.addEventListener('click', function () {
+      ust.zapisz(ust.motyw === 'dark' ? 'light' : 'dark', ust.rozmiar);
+      odswiezWybory();
     });
 
-    element.querySelectorAll('[data-krok]').forEach(function (przycisk) {
+    element.querySelectorAll('[data-rozmiar]').forEach(function (przycisk) {
       przycisk.addEventListener('click', function () {
-        var i = indeksRozmiaru() + parseInt(przycisk.getAttribute('data-krok'), 10);
-        if (i < 0 || i >= ROZMIARY.length) return;
-        ust.zapisz(ust.motyw, ROZMIARY[i]);
+        ust.zapisz(ust.motyw, parseInt(przycisk.getAttribute('data-rozmiar'), 10));
         odswiezWybory();
       });
     });
@@ -184,14 +218,19 @@
   /** Zaznacza w panelu to, co jest teraz ustawione. */
   function odswiezWybory() {
     if (!panel) return;
-    panel.querySelectorAll('[data-motyw]').forEach(function (przycisk) {
-      var wybrany = przycisk.getAttribute('data-motyw') === ust.motyw;
-      przycisk.setAttribute('aria-pressed', wybrany ? 'true' : 'false');
+    var ciemno = ust.motyw === 'dark';
+    ikonaMotywu.innerHTML = ciemno ? IKONA_MOTYWU.dark : IKONA_MOTYWU.light;
+    nazwaMotywu.textContent = ciemno ? NAZWA_MOTYWU.dark : NAZWA_MOTYWU.light;
+    przyciskMotywu.setAttribute('aria-pressed', ciemno ? 'true' : 'false');
+
+    // Wybrany jest krok najbliższy zapamiętanej wartości, więc rozmiar zapisany
+    // przez poprzedni panel — na przykład po dwóch krokach A+ — też trafia na
+    // któryś z pięciu przycisków, zamiast nie zaznaczać żadnego.
+    var wybrany = ROZMIARY[indeksRozmiaru()];
+    panel.querySelectorAll('[data-rozmiar]').forEach(function (przycisk) {
+      var ten = parseInt(przycisk.getAttribute('data-rozmiar'), 10) === wybrany;
+      przycisk.setAttribute('aria-pressed', ten ? 'true' : 'false');
     });
-    var i = indeksRozmiaru();
-    wartoscRozmiaru.textContent = ROZMIARY[i] + '%';
-    panel.querySelector('[data-krok="-1"]').disabled = i === 0;
-    panel.querySelector('[data-krok="1"]').disabled = i === ROZMIARY.length - 1;
   }
 
   // ——— Tryb offline ———
@@ -306,15 +345,6 @@
       rejestracja = r;
       odswiezOffline();
       if (panel && !panel.hidden) zapytajOMedia();
-    });
-  }
-
-  // Motyw „Auto” ma iść za ustawieniem telefonu także wtedy, gdy zmieni się ono
-  // przy otwartej stronie — o zmierzchu, przy oglądaniu tej samej pieśni.
-  var ciemnySystem = window.matchMedia('(prefers-color-scheme: dark)');
-  if (ust && ciemnySystem.addEventListener) {
-    ciemnySystem.addEventListener('change', function () {
-      if (ust.motyw === 'auto') ust.zastosuj();
     });
   }
 

@@ -199,65 +199,104 @@ html[data-spiewnik-theme] .article h1 {
   color: var(--spiewnik-tekst);
 }
 
-.spiewnik-ust__grupa {
+/* Motyw: jeden przycisk ze znakiem i słowem. Wysokości i szerokości celów
+   dotyku w px, nie w rem: rem chodzi tu za ustawieniem „Rozmiar tekstu”,
+   a przycisk ma być dobry pod kciuk także wtedy, gdy ktoś zmniejszy tekst
+   do 85%. Dwie klasy, bo motyw strony maluje każdy przycisk wewnątrz .typeset
+   regułą .typeset button. */
+.spiewnik-ust .spiewnik-ust__motyw {
   display: inline-flex;
-  align-items: stretch;
-  background: var(--spiewnik-tlo);
-  border: 1px solid var(--spiewnik-ramka);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-/* Wysokości i szerokości celów dotyku w px, nie w rem: rem chodzi tu za
-   ustawieniem „Rozmiar tekstu”, a przycisk ma być dobry pod kciuk także wtedy,
-   gdy ktoś zmniejszy tekst do 85%. */
-.spiewnik-ust .spiewnik-ust__opcja {
+  align-items: center;
+  gap: .5rem;
   margin: 0;
-  padding: .4rem .7rem;
+  padding: .4rem .8rem;
   min-height: 44px;
-  min-width: 44px;
   font-size: .8em;
   line-height: 1.4;
   color: var(--spiewnik-tekst);
-  background: none;
-  border: 0;
+  background: var(--spiewnik-tlo);
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.spiewnik-ust .spiewnik-ust__motyw:hover,
+.spiewnik-ust .spiewnik-ust__motyw:focus {
+  color: var(--spiewnik-akcent);
+  border-color: var(--spiewnik-akcent);
+  background: var(--spiewnik-tlo);
+  box-shadow: none;
+}
+
+/* Znak jest wielkości wiersza, w barwie napisu obok — kreska, nie rysunek. */
+.spiewnik-ust__ikona {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.spiewnik-ust__ikona svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Rozmiar tekstu: pięć zrośniętych kroków, każde „A” narysowane w wielkości,
+   którą nastawia. Wielkości poniżej są wielkościami znaku na przycisku, nie
+   tymi, które przycisk nakłada — te są dalej w procentach z --spiewnik-skala.
+   Pięć pól po 44px mieści się na ekranie 320px, bo celem dotyku jest pole,
+   a nie litera w nim. */
+.spiewnik-ust__kroki {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.spiewnik-ust .spiewnik-ust__krok {
+  margin: 0 0 0 -1px;
+  padding: 0 .2rem;
+  min-height: 44px;
+  min-width: 44px;
+  line-height: 1;
+  color: var(--spiewnik-tekst);
+  background: var(--spiewnik-tlo);
+  border: 1px solid var(--spiewnik-ramka);
   border-radius: 0;
   box-shadow: none;
 }
 
-.spiewnik-ust .spiewnik-ust__opcja + .spiewnik-ust__opcja,
-.spiewnik-ust .spiewnik-ust__wartosc + .spiewnik-ust__opcja {
-  border-left: 1px solid var(--spiewnik-ramka);
+.spiewnik-ust .spiewnik-ust__krok:first-child {
+  margin-left: 0;
+  border-radius: 2px 0 0 2px;
 }
 
-.spiewnik-ust .spiewnik-ust__opcja:hover,
-.spiewnik-ust .spiewnik-ust__opcja:focus {
+.spiewnik-ust .spiewnik-ust__krok:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="85"] { font-size: 12px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="100"] { font-size: 14px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="115"] { font-size: 17px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="130"] { font-size: 20px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="150"] { font-size: 23px; }
+
+.spiewnik-ust .spiewnik-ust__krok:hover,
+.spiewnik-ust .spiewnik-ust__krok:focus {
   color: var(--spiewnik-akcent);
   background: var(--spiewnik-plyta);
   box-shadow: none;
 }
 
-.spiewnik-ust .spiewnik-ust__opcja[aria-pressed="true"] {
+/* Krok, na którym się stoi, jest wypełniony i stoi nad sąsiadami — inaczej
+   jego własną ramkę z obu stron przykrywałaby ramka sąsiada. */
+.spiewnik-ust .spiewnik-ust__krok[aria-pressed="true"] {
+  position: relative;
+  z-index: 1;
   color: var(--spiewnik-na-akcencie);
   background: var(--spiewnik-akcent);
-}
-
-.spiewnik-ust .spiewnik-ust__opcja:disabled {
-  color: var(--spiewnik-cichy);
-  background: none;
-  opacity: .45;
-  cursor: default;
-}
-
-.spiewnik-ust__wartosc {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 56px;
-  padding: 0 .4rem;
-  font-size: .8em;
-  color: var(--spiewnik-tekst);
-  border-left: 1px solid var(--spiewnik-ramka);
+  border-color: var(--spiewnik-akcent);
 }
 
 .spiewnik-ust__offline {
@@ -512,6 +551,26 @@ html[data-spiewnik-theme="dark"] .small {
   color: var(--spiewnik-cichy);
 }
 
+/* Pola sterowania w panelu ustawień: w jasnym motywie są jaśniejsze od płyty
+   panelu, w ciemnym barwa tła strony jest od niej ciemniejsza i zrośnięte
+   kroki rozmiaru gasną w płycie. Bierzemy więc ton nad nią, a najechanie
+   podnosi o kolejny. Wypełniony krok i tak jest w barwie akcentu. */
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__motyw,
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__krok {
+  background: var(--spiewnik-kreska);
+}
+
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__motyw:hover,
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__motyw:focus,
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__krok:hover,
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__krok:focus {
+  background: var(--spiewnik-ramka);
+}
+
+html[data-spiewnik-theme="dark"] .spiewnik-ust .spiewnik-ust__krok[aria-pressed="true"] {
+  background: var(--spiewnik-akcent);
+}
+
 html[data-spiewnik-theme="dark"] .song-search__input {
   color: var(--spiewnik-tekst);
   background: var(--spiewnik-plyta);
@@ -596,9 +655,10 @@ html[data-spiewnik-theme="dark"] .song__score {
     font-size: max(16px, .85em);
   }
 
+  /* Kroków rozmiaru tu nie ma: ich wielkości są całą treścią tego przycisku,
+     a podłoga 16px zrównałaby trzy pierwsze „A” w jedno. */
   html[data-spiewnik-theme] .spiewnik-ust__stan,
-  html[data-spiewnik-theme] .spiewnik-ust__wartosc,
-  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__opcja,
+  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__motyw,
   html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__pobierz,
   html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__usun {
     font-size: max(16px, .8em);
@@ -609,4 +669,36 @@ html[data-spiewnik-theme="dark"] .song__score {
   html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__przelacznik {
     font-size: max(14px, .8em);
   }
+}
+
+
+/* ——— Zainstalowana aplikacja ———
+   Śpiewnik z ekranu początkowego jest osobną aplikacją, a nie zakładką
+   serwisu: herb i menu Welecji zabierają tam górę ekranu i prowadzą w miejsca,
+   z których w oknie bez paska adresu nie ma czym wrócić. Zostaje więc sama
+   treść — odsyłacz powrotny, ustawienia i wyszukiwarka są na miejscu. W
+   przeglądarce nagłówek zostaje bez zmian.
+   Te same reguły dwa razy, bo Safari na iPhonie nie ustawia display-mode
+   w @media i zna tylko navigator.standalone — klasę stawia po nim skrypt
+   z nagłówka Śpiewnika, jeszcze przed pierwszym malowaniem. */
+
+@media (display-mode: standalone) {
+  html[data-spiewnik-theme] .header {
+    display: none;
+  }
+
+  /* Odstęp, który dawał nagłówek: bez niego pierwszy wiersz treści siedzi tuż
+     pod zegarkiem i baterią. Wcięcie ekranu doliczane osobno — na telefonach
+     z wyspą sam 1rem jest za mały. */
+  html[data-spiewnik-theme] .main {
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  }
+}
+
+html.spiewnik-samodzielna[data-spiewnik-theme] .header {
+  display: none;
+}
+
+html.spiewnik-samodzielna[data-spiewnik-theme] .main {
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
 }

@@ -4,6 +4,8 @@
   narysuje — inaczej ciemny Śpiewnik otwiera się białym błyskiem. Dlatego ten
   skrypt jest tutaj, w nagłówku i w treści strony, a nie w app.js na jej końcu.
   app.js buduje panel ustawień i woła window.spiewnik.zapisz().
+  Z tego samego powodu tutaj stoi rozpoznanie zainstalowanej aplikacji: nagłówek
+  serwisu ma w niej nie mignąć, zanim arkusz zdąży go schować.
 {%- endcomment -%}
 <link rel="stylesheet" href="{{ '/assets/spiewnik/app.css' | relative_url }}">
     <script>
@@ -25,7 +27,7 @@
         }
 
         var api = {
-          motyw: 'auto',
+          motyw: 'light',
           rozmiar: 100,
           /** Zapisuje wybór i od razu go pokazuje. */
           zapisz: function (motyw, rozmiar) {
@@ -38,8 +40,10 @@
             api.zastosuj();
           },
           zastosuj: function () {
-            var ciemno = api.motyw === 'dark' || (api.motyw !== 'light'
-              && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            // Motywy są dwa i wybiera się je ręcznie: jasny, dopóki ktoś nie
+            // przełączy na ciemny. Ustawienie telefonu o niczym tu nie
+            // rozstrzyga — śpiewnik ma wyglądać tak, jak go zostawiono.
+            var ciemno = api.motyw === 'dark';
             el.setAttribute('data-spiewnik-theme', ciemno ? 'dark' : 'light');
             el.style.setProperty('--spiewnik-skala', api.rozmiar / 100);
             var meta = document.querySelector('meta[name="theme-color"]');
@@ -47,10 +51,20 @@
           }
         };
 
-        var motyw = zPamieci(KLUCZ_MOTYW, 'auto');
-        if (motyw === 'light' || motyw === 'dark') api.motyw = motyw;
+        // Zapamiętane „auto” po wcześniejszej wersji panelu nie ma już swojego
+        // przycisku, więc zostaje przy jasnym — tak samo jak pusta pamięć.
+        if (zPamieci(KLUCZ_MOTYW, 'light') === 'dark') api.motyw = 'dark';
         api.rozmiar = parseInt(zPamieci(KLUCZ_ROZMIAR, '100'), 10) || 100;
         api.zastosuj();
+
+        // Zainstalowana aplikacja nie ma nagłówka serwisu — herb i menu chowa
+        // arkusz, a ta klasa jest dla Safari na iPhonie, które display-mode w
+        // @media zna dopiero od niedawna, a navigator.standalone od zawsze.
+        if (window.matchMedia('(display-mode: standalone)').matches
+          || navigator.standalone === true) {
+          el.classList.add('spiewnik-samodzielna');
+        }
+
         return api;
       })();
     </script>
