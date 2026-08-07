@@ -25,12 +25,15 @@
   // czytamy samą klasę, żeby jedno pytanie miało jedną odpowiedź.
   var samodzielna = document.documentElement.classList.contains('spiewnik-samodzielna');
 
-  // Pięć kroków od 85% do 150%. Mniej niż 85% robi z tekstu pieśni druk
-  // ulotny, więcej niż 150% łamie dwuwierszowe refreny na telefonie.
-  var ROZMIARY = [85, 100, 115, 130, 150];
+  // Pięć kroków od 115% do 200%. Ten panel stoi wyłącznie w zainstalowanej
+  // aplikacji, czyli na telefonie — a tam nikt nie zmniejsza tekstu pieśni.
+  // Kroki poniżej 115% zabierały więc miejsce tym, o które chodzi: śpiewa się
+  // z ekranu trzymanego w ręku i to duży druk jest tu do czegoś potrzebny.
+  // Ta sama piątka stoi w skrypcie z nagłówka, który odsiewa nią pamięć.
+  var ROZMIARY = [115, 130, 150, 175, 200];
   // Na ekranie każdy krok to samo „A” — czym się różnią, widać po wielkości,
   // a czytnik ekranu dowiaduje się tego z aria-label.
-  var NAZWY_ROZMIARU = ['Najmniejszy', 'Domyślny', 'Większy', 'Jeszcze większy', 'Największy'];
+  var NAZWY_ROZMIARU = ['Domyślny', 'Większy', 'Duży', 'Bardzo duży', 'Największy'];
 
   // Rysunki kreską w barwie tekstu przycisku: słońce dla jasnego motywu,
   // księżyc dla ciemnego. Grubość kreski i wielkość nadaje arkusz, żeby te
@@ -73,14 +76,12 @@
 
   // ——— Ustawienia ———
 
+  /** Krok, na którym stoi ustawienie; spoza listy — pierwszy, czyli domyślny. */
   function indeksRozmiaru() {
-    var najblizszy = 0;
-    for (var i = 1; i < ROZMIARY.length; i++) {
-      if (Math.abs(ROZMIARY[i] - ust.rozmiar) < Math.abs(ROZMIARY[najblizszy] - ust.rozmiar)) {
-        najblizszy = i;
-      }
+    for (var i = 0; i < ROZMIARY.length; i++) {
+      if (ROZMIARY[i] === ust.rozmiar) return i;
     }
-    return najblizszy;
+    return 0;
   }
 
   /** Pięć przycisków „A”, każdy narysowany w wielkości, którą nastawia. */
@@ -226,9 +227,9 @@
     nazwaMotywu.textContent = ciemno ? NAZWA_MOTYWU.dark : NAZWA_MOTYWU.light;
     przyciskMotywu.setAttribute('aria-pressed', ciemno ? 'true' : 'false');
 
-    // Wybrany jest krok najbliższy zapamiętanej wartości, więc rozmiar zapisany
-    // przez poprzedni panel — na przykład po dwóch krokach A+ — też trafia na
-    // któryś z pięciu przycisków, zamiast nie zaznaczać żadnego.
+    // Wybrany jest krok o zapamiętanej wartości, a zapamiętane 85% i 100% po
+    // dawnej skali — pierwszy z pięciu, zamiast żadnego. W pamięci zostaje
+    // przy tym stara liczba, dopóki ktoś nie naciśnie któregoś przycisku.
     var wybrany = ROZMIARY[indeksRozmiaru()];
     panel.querySelectorAll('[data-rozmiar]').forEach(function (przycisk) {
       var ten = parseInt(przycisk.getAttribute('data-rozmiar'), 10) === wybrany;

@@ -70,19 +70,22 @@ html[data-spiewnik-theme] { font-size: calc(75% * var(--spiewnik-skala, 1)); }
   html[data-spiewnik-theme] { font-size: calc(118.75% * var(--spiewnik-skala, 1)); }
 }
 
-/* Przy 150% na telefonie do kolumny przestają się mieścić najdłuższe pojedyncze
-   słowa — tytuł „Gaudeamus…” i nazwy w spisie źródeł — i cała strona zaczyna
-   jeździć na boki. Łamiemy je dopiero wtedy, gdy nie ma innego wyjścia: przy
-   100% nic się od tej reguły nie zmienia. */
+/* Przy większych krokach na telefonie do kolumny przestają się mieścić
+   najdłuższe pojedyncze słowa — tytuł „Gaudeamus…” i nazwy w spisie źródeł —
+   i cała strona zaczyna jeździć na boki. Łamiemy je dopiero wtedy, gdy nie ma
+   innego wyjścia: przy 100% nic się od tej reguły nie zmienia. */
 html[data-spiewnik-theme] .article {
   overflow-wrap: break-word;
 }
 
-/* Tytuł jest osobno, bo motyw układa go flexem obok cyrkla, a element flexowy
+/* Tytuły są osobno, bo motyw układa je flexem obok cyrkla, a element flexowy
    nie zwęża się poniżej najdłuższego słowa — break-word sam go tam nie łamie.
    „anywhere” liczy się już przy wyznaczaniu tej szerokości, więc „Gaudeamus…”
-   przechodzi do drugiego wiersza zamiast wypychać stronę poza ekran. */
-html[data-spiewnik-theme] .article h1 {
+   przechodzi do drugiego wiersza zamiast wypychać stronę poza ekran. Nagłówki
+   działów spisu tak samo: „Pieśni towarzyskie” na ekranie 320px wychodziło przy
+   największym kroku poza kolumnę i cały spis dawał się przesuwać na boki. */
+html[data-spiewnik-theme] .article h1,
+html[data-spiewnik-theme] .article h2 {
   overflow-wrap: anywhere;
 }
 
@@ -201,8 +204,8 @@ html[data-spiewnik-theme] .article h1 {
 
 /* Motyw: jeden przycisk ze znakiem i słowem. Wysokości i szerokości celów
    dotyku w px, nie w rem: rem chodzi tu za ustawieniem „Rozmiar tekstu”,
-   a przycisk ma być dobry pod kciuk także wtedy, gdy ktoś zmniejszy tekst
-   do 85%. Dwie klasy, bo motyw strony maluje każdy przycisk wewnątrz .typeset
+   a 44px ma być pod kciukiem niezależnie od tego, na którym kroku ktoś stoi.
+   Dwie klasy, bo motyw strony maluje każdy przycisk wewnątrz .typeset
    regułą .typeset button. */
 .spiewnik-ust .spiewnik-ust__motyw {
   display: inline-flex;
@@ -248,7 +251,7 @@ html[data-spiewnik-theme] .article h1 {
    którą nastawia. Wielkości poniżej są wielkościami znaku na przycisku, nie
    tymi, które przycisk nakłada — te są dalej w procentach z --spiewnik-skala.
    Pięć pól po 44px mieści się na ekranie 320px, bo celem dotyku jest pole,
-   a nie litera w nim. */
+   a nie litera w nim; największe „A” ma w takim polu jeszcze zapas na odstęp. */
 .spiewnik-ust__kroki {
   display: inline-flex;
   align-items: stretch;
@@ -276,11 +279,11 @@ html[data-spiewnik-theme] .article h1 {
   border-radius: 0 2px 2px 0;
 }
 
-.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="85"] { font-size: 12px; }
-.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="100"] { font-size: 14px; }
-.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="115"] { font-size: 17px; }
-.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="130"] { font-size: 20px; }
-.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="150"] { font-size: 23px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="115"] { font-size: 14px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="130"] { font-size: 16px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="150"] { font-size: 19px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="175"] { font-size: 23px; }
+.spiewnik-ust .spiewnik-ust__krok[data-rozmiar="200"] { font-size: 27px; }
 
 .spiewnik-ust .spiewnik-ust__krok:hover,
 .spiewnik-ust .spiewnik-ust__krok:focus {
@@ -669,7 +672,7 @@ html[data-spiewnik-theme="dark"] .song__score {
   }
 
   /* Kroków rozmiaru tu nie ma: ich wielkości są całą treścią tego przycisku,
-     a podłoga 16px zrównałaby trzy pierwsze „A” w jedno. */
+     a podłoga 16px zrównałaby dwa pierwsze „A” w jedno. */
   html[data-spiewnik-theme] .spiewnik-ust__stan,
   html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__motyw,
   html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__pobierz,

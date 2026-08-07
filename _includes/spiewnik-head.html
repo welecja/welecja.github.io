@@ -17,6 +17,10 @@
         // Kolor paska stanu telefonu. Jasny to barwa Śpiewnika z manifestu,
         // ciemny to tło ciemnego motywu z app.css — muszą się zgadzać.
         var KOLOR = { light: '#005248', dark: '#1b201f' };
+        // Pięć kroków rozmiaru tekstu. Tę samą piątkę ma app.js, który rysuje
+        // z niej przyciski panelu; tutaj służy do odsiania z pamięci wszystkiego,
+        // co żadnym z nich nie jest. Pierwszy krok jest zarazem domyślnym.
+        var ROZMIARY = [115, 130, 150, 175, 200];
 
         function zPamieci(klucz, domyslnie) {
           try {
@@ -26,8 +30,23 @@
           }
         }
 
+        /** Zapamiętany rozmiar, o ile jest jednym z pięciu kroków. */
+        function rozmiarZPamieci() {
+          var zapisany = parseInt(zPamieci(KLUCZ_ROZMIAR, ''), 10);
+          for (var i = 0; i < ROZMIARY.length; i++) {
+            if (ROZMIARY[i] === zapisany) return zapisany;
+          }
+          // Pamięć po dawnej skali — 85% i 100% miały jeszcze swoje przyciski —
+          // wraca na pierwszy krok, tak samo jak pusta i jak każda wartość spoza
+          // listy. W pamięci tego nie poprawiamy: zapis należy do naciśnięcia
+          // przycisku, a nie do samego odczytu.
+          return ROZMIARY[0];
+        }
+
         var api = {
           motyw: 'light',
+          // Wartości serwisu, nie aplikacji: 100 to skala 1, czyli strona
+          // narysowana dokładnie tak, jak ją opisuje motyw.
           rozmiar: 100,
           /** Zapisuje wybór i od razu go pokazuje. */
           zapisz: function (motyw, rozmiar) {
@@ -70,7 +89,10 @@
           // Zapamiętane „auto” po wcześniejszej wersji panelu nie ma już swojego
           // przycisku, więc zostaje przy jasnym — tak samo jak pusta pamięć.
           if (zPamieci(KLUCZ_MOTYW, 'light') === 'dark') api.motyw = 'dark';
-          api.rozmiar = parseInt(zPamieci(KLUCZ_ROZMIAR, '100'), 10) || 100;
+          // Aplikacja startuje o krok większa od serwisu: czyta się ją z
+          // telefonu trzymanego w ręku, a pieśni śpiewają także ci Weleci,
+          // którym drobny druk już nie służy.
+          api.rozmiar = rozmiarZPamieci();
         }
         api.zastosuj();
 
