@@ -19,6 +19,8 @@ welecja.pl is the organization's only domain. It hosts the organization's offici
 
 The registry record can be independently verified in the official register of the Polish Ministry of Justice at [ekrs.ms.gov.pl](https://ekrs.ms.gov.pl/web/wyszukiwarka-krs) by searching for KRS number 0000295248.
 
+The domain itself is registered to the organization: the official .pl registry (NASK) lists **Korporacja Akademicka Welecja** as the registrant of welecja.pl (registered 29 May 2007). This can be independently verified at [rdap.dns.pl/domain/welecja.pl](https://rdap.dns.pl/domain/welecja.pl) or via the registry's WHOIS search at [dns.pl](https://www.dns.pl/en/whois).
+
 Published on 7 August 2026 for the purpose of Google for Nonprofits / Google Workspace for Nonprofits domain verification.
 
 ## Polski
@@ -33,3 +35,5 @@ Adres korespondencyjny: Skrytka pocztowa 99, 00-950 Warszawa 1
 welecja.pl jest jedyną domeną stowarzyszenia — służy jako oficjalna strona internetowa oraz domena pocztowa (Google Workspace, administrowana przez konradurban@welecja.pl w imieniu prezydium).
 
 Wpis w KRS można zweryfikować w wyszukiwarce [ekrs.ms.gov.pl](https://ekrs.ms.gov.pl/web/wyszukiwarka-krs) po numerze KRS 0000295248.
+
+Sama domena jest zarejestrowana na stowarzyszenie: oficjalny rejestr domen .pl (NASK) wskazuje **Korporację Akademicką Welecję** jako abonenta domeny welecja.pl (rejestracja 29 maja 2007 r.). Można to zweryfikować pod adresem [rdap.dns.pl/domain/welecja.pl](https://rdap.dns.pl/domain/welecja.pl) lub w wyszukiwarce WHOIS na [dns.pl](https://www.dns.pl/whois).
