@@ -87,5 +87,5 @@ Mamy nadzieję, że nasz śpiewnik będzie użyteczny przy okazji licznych spotk
 <p class="song__copyright">© Korporacja Akademicka Welecja</p>
 
 <style>
-  .song__copyright { margin-top: 2.8rem; font-size: .8em; color: #888; }
+  .song__copyright { margin-top: 2.8rem; font-size: .8em; color: #757575; }
 </style>

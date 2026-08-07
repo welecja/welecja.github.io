@@ -24,10 +24,14 @@ Nagrania, nuty i teksty pieśni weleckich. Dostęp na hasło.
 
 <style>
   .gate { margin: 1.2rem 0; max-width: 24rem; }
+  /* Wysokości w px, nie w rem: rem jest w tym motywie mniejszy na telefonie,
+     a to właśnie tam trzeba w pole i w przycisk trafić kciukiem. */
   .gate__input {
     display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
+    min-height: 44px;
     font: inherit; border: 1px solid #ccc; border-radius: 2px;
   }
+  .gate .button { min-height: 44px; }
   .gate__input:focus { outline: none; border-color: #005248; }
   .gate__error { color: #a33; margin-top: .8rem; }
 </style>

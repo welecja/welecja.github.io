@@ -9,7 +9,7 @@ spiewnik_app: true # spis leży poza spiewnik/, więc nie łapie go domyślna re
 excerpt: "Śpiewnik Welecki — nagrania, nuty i teksty pieśni oficjalnych i towarzyskich Korporacji Akademickiej Welecja."
 ---
 
-<a href="{{ '/dla-weletow/' | relative_url }}">&larr; Portal Welecki</a>
+<a href="{{ '/dla-weletow/' | relative_url }}">&larr; Dla Weletów</a>
 
 Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po komersze. Poniżej znajduje się pełny spis pieśni ze Śpiewnika Weleckiego (Warszawa 2010, red. Władysław Jóźwicki); przy każdej pieśni dostępne są nuty i tekst, a przy części także nagranie.
 
@@ -49,7 +49,7 @@ Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po 
   .song-search__none { color: #666; margin-top: .8rem; }
   .song-list { list-style: none; padding-left: 0; }
   .song-list li { margin: .3rem 0; }
-  .song__copyright { margin-top: 2.8rem; font-size: .8em; color: #888; }
+  .song__copyright { margin-top: 2.8rem; font-size: .8em; color: #757575; }
 </style>
 <script>
   // wyszukiwarka: tytuły + pełne teksty pieśni; ó/ę/ł itd. sprowadzane do ASCII,

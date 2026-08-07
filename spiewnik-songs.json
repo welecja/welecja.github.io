@@ -24,7 +24,8 @@ layout: null
       "lyrics": {{ piesn.lyrics | jsonify }},
       "recordings": [{% for nagranie in piesn.recordings %}{"src": {{ nagranie.src | jsonify }}, "note": {{ nagranie.note | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
       "scores": [{% for nuty in piesn.scores %}{{ nuty | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
-      "pdf": {{ piesn.pdf | jsonify }}
+      "pdf": {{ piesn.pdf | jsonify }},
+      "archiwalia": {{ piesn.archiwalia | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {%- endfor %}
   ]

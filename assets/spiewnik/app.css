@@ -87,6 +87,41 @@ html[data-spiewnik-theme] .article h1 {
 }
 
 
+/* ——— Nagłówek na telefonie ———
+   „Rozmiar tekstu” powiększa pieśń, a nie nagłówek: herb i menu to nie jest
+   tekst, który ktoś czyta. Powód jest jednak przede wszystkim praktyczny.
+   Zwinięte menu chowa się ujemnym marginesem wyliczonym raz, przy wczytaniu
+   strony (skrypt w nav-header.html) — rosło więc razem ze skalą, a margines
+   zostawał stary i po dwóch krokach A+ menu wychodziło spod nagłówka na
+   stronę, tuż nad przycisk „Ustawienia”. Każdą miarę nagłówka dzielimy przez
+   skalę, czyli przy 100% nie zmienia się w nim nic. */
+
+@media screen and (max-width: 639px) {
+  html[data-spiewnik-theme] .header .nav {
+    font-size: calc(1em / var(--spiewnik-skala, 1));
+    line-height: 1.5;
+    /* Nagłówek jest wysoki jak herb, zwinięte menu — jak sam przycisk. Nadmiar
+       rozdzielony między nie spycha listę pod dolną krawędź nagłówka; wcześniej
+       wystawał spod niej pasek pierwszej pozycji, ucięty w połowie liter. */
+    justify-content: space-between;
+  }
+
+  html[data-spiewnik-theme] .header .nav a {
+    padding: calc(.2rem / var(--spiewnik-skala, 1));
+  }
+
+  html[data-spiewnik-theme] .header .button--nav {
+    min-height: calc(4rem / var(--spiewnik-skala, 1));
+    min-width: calc(4rem / var(--spiewnik-skala, 1));
+  }
+
+  html[data-spiewnik-theme] .header .logo,
+  html[data-spiewnik-theme] .header .logo img {
+    max-height: calc(5rem / var(--spiewnik-skala, 1));
+  }
+}
+
+
 /* ——— Panel ustawień ———
    Wstawia go app.js na czele artykułu, tuż nad odsyłaczem powrotnym. Zwinięty
    jest jedną linijką z prawej: kto przyszedł po tekst pieśni, ma go nie
@@ -102,8 +137,9 @@ html[data-spiewnik-theme] .article h1 {
   display: none;
 }
 
+/* Odstęp od nagłówka: pasek zaczynał się dokładnie na jego dolnej krawędzi. */
 .spiewnik-ust {
-  margin: 0 0 1.2rem;
+  margin: 1rem 0 1.2rem;
   text-align: right;
 }
 
@@ -305,23 +341,29 @@ html[data-spiewnik-theme] .article h1 {
   margin-right: .8rem;
 }
 
+/* Pasek istnieje tylko na telefonie, więc próg w px jak w panelu ustawień:
+   .85em to przy tutejszym rem ~13,6 px — za mało do czytania. Podpowiedź dla
+   iPhone'a to na iOS jedyna droga instalacji, ma być tak samo czytelna. */
 .spiewnik-install__text {
   margin: 0;
-  font-size: .85em;
+  font-size: max(16px, .85em);
   line-height: 1.5;
 }
 
 .spiewnik-install__hint {
   margin: .4rem 0 0;
-  font-size: .8em;
+  font-size: max(16px, .8em);
   line-height: 1.5;
   color: var(--spiewnik-cichy);
 }
 
+/* Wysokość w px, jak w panelu ustawień: .45rem odstępu to na telefonie pięć
+   pikseli i przycisk wychodził niższy, niż da się trafić kciukiem. */
 .spiewnik-install .spiewnik-install__go {
   flex: 0 0 auto;
   margin: 0;
   padding: .45rem 1rem;
+  min-height: 40px;
   font-size: .8em;
   color: var(--spiewnik-na-akcencie);
   background: var(--spiewnik-akcent);
@@ -336,6 +378,8 @@ html[data-spiewnik-theme] .article h1 {
   flex: 0 0 auto;
   margin: 0 -.4rem 0 .3rem;
   padding: .45em .6em;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 1.2em;
   line-height: 1;
   color: var(--spiewnik-cichy);
@@ -523,9 +567,12 @@ html[data-spiewnik-theme="dark"] .song__score {
 
   /* Pozycje spisu i odsyłacz powrotny jako cele dotyku wysokie na 44px.
      Podkreślenie linku motyw rysuje tłem elementu, więc obszar tła liczymy
-     od pola treści — inaczej kreska zjeżdża pod dodany odstęp. */
+     od pola treści — inaczej kreska zjeżdża pod dodany odstęp.
+     Cztery piksele przerwy między pozycjami, bo cele stykające się bok w bok
+     nie mają gdzie chybić: kciuk trafiony między dwie pieśni otwierał tę
+     drugą, a spis jest miejscem, w którym nikt nie patrzy na palec. */
   html[data-spiewnik-theme] .song-list li {
-    margin: 0;
+    margin: 0 0 4px;
   }
 
   html[data-spiewnik-theme] .song-list li a,
@@ -540,5 +587,26 @@ html[data-spiewnik-theme="dark"] .song__score {
 
   html[data-spiewnik-theme] .article > p:first-of-type > a {
     display: inline-block;
+  }
+
+  /* Panel ustawień czyta się z tej samej odległości co pieśń, a 0.8em znaczyło
+     na telefonie 12,8 piksela — drobniej niż wszystko wokół. Podłoga w px, nie
+     zamiast em: przy powiększonym tekście napisy mają dalej rosnąć. */
+  html[data-spiewnik-theme] .spiewnik-ust__etykieta {
+    font-size: max(16px, .85em);
+  }
+
+  html[data-spiewnik-theme] .spiewnik-ust__stan,
+  html[data-spiewnik-theme] .spiewnik-ust__wartosc,
+  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__opcja,
+  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__pobierz,
+  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__usun {
+    font-size: max(16px, .8em);
+  }
+
+  /* Sam napis „Ustawienia” zostaje mniejszy od treści — ma być do znalezienia,
+     a nie do czytania — ale nie drobniejszy, niż da się przeczytać. */
+  html[data-spiewnik-theme] .spiewnik-ust .spiewnik-ust__przelacznik {
+    font-size: max(14px, .8em);
   }
 }

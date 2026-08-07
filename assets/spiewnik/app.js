@@ -23,17 +23,19 @@
   // Pięć kroków od 85% do 150%. Mniej niż 85% robi z tekstu pieśni druk
   // ulotny, więcej niż 150% łamie dwuwierszowe refreny na telefonie.
   var ROZMIARY = [85, 100, 115, 130, 150];
-  // Nagrania, nuty i PDF-y wskazane w spisie pieśni ważą razem około 129 MiB
-  // w 296 plikach. Liczbę podajemy okrągłą: dokładna zmieni się przy pierwszym
-  // dograniu nagrania, a tu chodzi o to, żeby ktoś na danych mobilnych wiedział,
-  // na co się zgadza.
-  var WAGA_MEDIOW = 'ok. 130 MB';
+  // Nagrania, nuty, PDF-y i skany archiwalne wskazane w spisie pieśni ważą
+  // razem 136 MiB w 301 plikach — czyli około 143 MB tak, jak liczy je operator.
+  // Liczbę podajemy okrągłą: dokładna zmieni się przy pierwszym dogranym
+  // nagraniu, a tu chodzi o to, żeby ktoś na danych mobilnych wiedział, na co
+  // się zgadza.
+  var WAGA_MEDIOW = 'ok. 140 MB';
 
   var swObslugiwany = 'serviceWorker' in navigator;
   var swZawiodl = false;
   var rejestracja = null;
 
   var panel = null;
+  var przelacznik = null;
   var stanShell = null;
   var stanMediow = null;
   var przyciskPobierz = null;
@@ -97,7 +99,7 @@
       + '</div>';
 
     panel = element.querySelector('.spiewnik-ust__panel');
-    var przelacznik = element.querySelector('.spiewnik-ust__przelacznik');
+    przelacznik = element.querySelector('.spiewnik-ust__przelacznik');
     stanShell = element.querySelector('.spiewnik-ust__stan');
     stanMediow = element.querySelector('.spiewnik-ust__stan--media');
     przyciskPobierz = element.querySelector('.spiewnik-ust__pobierz');
@@ -108,9 +110,30 @@
       var otwieramy = panel.hidden;
       panel.hidden = !otwieramy;
       przelacznik.setAttribute('aria-expanded', otwieramy ? 'true' : 'false');
-      // Stan cache'u sprawdzamy przy otwarciu, a nie przy wejściu na stronę:
-      // przeliczenie trzystu wpisów nie ma się dziać przy każdej pieśni.
-      if (otwieramy) zapytajOMedia();
+      if (otwieramy) {
+        // Dopisek potwierdza czynność sprzed chwili. Panel otwarty ponownie —
+        // przy innej pieśni, kwadrans później — to już nie ta chwila.
+        uwaga = '';
+        // Stan cache'u sprawdzamy przy otwarciu, a nie przy wejściu na stronę:
+        // przeliczenie trzystu wpisów nie ma się dziać przy każdej pieśni.
+        zapytajOMedia();
+      }
+    });
+
+    // Escape i kliknięcie obok zamykają panel. Panel przykrywa początek pieśni,
+    // a na telefonie zamknięcie go inaczej niż trafieniem w ten sam mały napis
+    // nie jest oczywiste.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' && e.key !== 'Esc') return;
+      if (zamknijPanel()) przelacznik.focus();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!panel || panel.hidden) return;
+      // Przełącznik ma dalej działać: jego własna obsługa właśnie panel
+      // otworzyła, a to zdarzenie jest tym samym kliknięciem w drodze w górę.
+      if (panel.contains(e.target) || przelacznik.contains(e.target)) return;
+      zamknijPanel();
     });
 
     element.querySelectorAll('[data-motyw]').forEach(function (przycisk) {
@@ -148,6 +171,14 @@
     odswiezWybory();
     odswiezOffline();
     return element;
+  }
+
+  /** Zamyka panel; zwraca true, jeżeli było co zamykać. */
+  function zamknijPanel() {
+    if (!panel || panel.hidden) return false;
+    panel.hidden = true;
+    przelacznik.setAttribute('aria-expanded', 'false');
+    return true;
   }
 
   /** Zaznacza w panelu to, co jest teraz ustawione. */
@@ -238,10 +269,17 @@
         postep = null;
         if (dane.error) {
           uwaga = 'Nie udało się odczytać spisu nagrań — spróbuj przy połączeniu z siecią.';
-        } else if (dane.failed) {
-          uwaga = 'Części plików nie udało się pobrać — spróbuj ponownie przy lepszym połączeniu.';
+        } else {
+          if (dane.failed) {
+            uwaga = 'Części plików nie udało się pobrać — spróbuj ponownie przy lepszym połączeniu.';
+          }
+          // Wynik pobierania wstawiamy w tym samym renderze, w którym znika
+          // pasek postępu. Inaczej między „Pobieranie… 296/296” a odpowiedzią
+          // na SPIEWNIK_MEDIA_STATUS wiersz zdążył pokazać pomiar sprzed
+          // pobierania, czyli „nie są pobrane” tuż po pobraniu wszystkiego.
+          mediaStan = { cached: dane.done - dane.failed, total: dane.total };
         }
-        zapytajOMedia(); // liczby bierzemy z cache'u, nie z przebiegu pobierania
+        zapytajOMedia(); // liczby potwierdzamy potem cache'em, nie przebiegiem pobierania
       } else if (dane.type === 'SPIEWNIK_MEDIA_STATUS') {
         mediaStan = dane;
       } else if (dane.type === 'SPIEWNIK_CLEARED') {

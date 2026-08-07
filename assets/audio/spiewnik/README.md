@@ -2,6 +2,7 @@
 title: false
 sitemap: false
 indexing: false
+published: false # spis techniczny nagrań — notatka w repo, nie strona serwisu
 ---
 
 # Śpiewnik Welecki — nagrania

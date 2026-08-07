@@ -51,6 +51,14 @@ const POWLOKA = [
   {{ '/assets/logos/spiewnik-icon-180.png' | relative_url | jsonify }},
   {{ '/assets/logos/spiewnik-icon-maskable-512.png' | relative_url | jsonify }},
 {%- comment -%}
+  Herb w nagłówku i cyrkiel przed tytułem stoją na każdej stronie Śpiewnika —
+  herb znacznikiem <img>, cyrkiel tłem nagłówka z arkusza. Oba leżą poza
+  /assets/audio|images/spiewnik|documents, więc nie łapie ich reguła mediów i
+  bez tych dwóch wierszy offline zostawały puste ramki.
+{%- endcomment %}
+  {{ '/assets/logos/herb.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-sm.png' | relative_url | jsonify }},
+{%- comment -%}
   Przy css_inline: true arkusz jest wklejony w <style> każdej strony i nie ma
   czego pobierać osobno; po przełączeniu na plik trzeba go mieć w powłoce, bo
   inaczej Śpiewnik otwiera się offline bez żadnych stylów. Kroje pisma idą
@@ -231,7 +239,18 @@ self.addEventListener('fetch', (e) => {
         if (nawigacja && !(await stronaSpiewnikaOk(r))) return zapisany || r;
         cache.put(klucz, r.clone()).catch(() => {});
         return r;
-      }).catch(() => zapisany || Response.error());
+      }).catch(async () => {
+        if (zapisany) return zapisany;
+        // Nawigacja pod adres, którego nigdy nie zapisaliśmy — pieśń dodana po
+        // instalacji, odsyłacz z literówką. Bez sieci przeglądarka pokazałaby
+        // wtedy własny ekran błędu; zapisany spis pieśni jest miejscem, z
+        // którego da się dojść dalej.
+        if (nawigacja) {
+          const spis = await cache.match(location.origin + ZAKRES);
+          if (spis) return spis;
+        }
+        return Response.error();
+      });
       return zapisany || siec;
     }))
   );
@@ -261,7 +280,7 @@ async function czytajPiesni() {
   return null;
 }
 
-/** Każde nagranie, nuty i PDF ze spisu, bez powtórzeń. */
+/** Każde nagranie, nuty, PDF i skan archiwalny ze spisu, bez powtórzeń. */
 async function adresyMediow() {
   const dane = await czytajPiesni();
   if (!dane) return null;
@@ -282,6 +301,9 @@ async function adresyMediow() {
   for (const piesn of dane.songs) {
     for (const nagranie of piesn.recordings || []) dodaj(nagranie && nagranie.src);
     for (const nuty of piesn.scores || []) dodaj(nuty);
+    // Skany archiwalne to jedyne, co przy części pieśni w ogóle jest do
+    // obejrzenia — pominięte tutaj zostawały poza pobieraniem hurtem.
+    for (const skan of piesn.archiwalia || []) dodaj(skan);
     dodaj(piesn.pdf);
   }
   return Array.from(widziane);

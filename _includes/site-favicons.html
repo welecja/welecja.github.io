@@ -1,7 +1,14 @@
 {% if site.favicons %}
   {% for icon in site.favicons %}
     <link rel="icon" type="image/png" href="{{ icon[1] | relative_url }}" sizes="{{ icon[0] }}x{{ icon[0] }}">
-    <link rel="apple-touch-icon" sizes="{{ icon[0] }}x{{ icon[0] }}" href="{{ icon[1] | relative_url }}">
+    {%- comment -%}
+      Strony Śpiewnika mają własną ikonę na ekran początkowy — 180×180, wpiętą
+      w default.html. Ta 32-pikselowa stawała obok niej i bywała wybierana jako
+      ostatnia z brzegu, więc Śpiewnik lądował na ekranie rozmazany. Warunek
+      siedzi w jednym wierszu z odsyłaczem, żeby strony publiczne wychodziły
+      z builda co do bajta takie same jak przedtem.
+    {%- endcomment %}
+    {% unless page.spiewnik_app %}<link rel="apple-touch-icon" sizes="{{ icon[0] }}x{{ icon[0] }}" href="{{ icon[1] | relative_url }}">{% endunless %}
   {% endfor %}
 {% endif %}
 <link rel="shortcut icon" href="{{ site.avatarurl + '?s=32' | default: site.logo | relative_url }}">
