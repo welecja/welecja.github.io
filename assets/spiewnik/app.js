@@ -21,6 +21,9 @@
 
   var ust = window.spiewnik;
   var artykul = document.querySelector('article.article');
+  // Czy to zainstalowana aplikacja, rozstrzyga skrypt z nagłówka — tutaj
+  // czytamy samą klasę, żeby jedno pytanie miało jedną odpowiedź.
+  var samodzielna = document.documentElement.classList.contains('spiewnik-samodzielna');
 
   // Pięć kroków od 85% do 150%. Mniej niż 85% robi z tekstu pieśni druk
   // ulotny, więcej niż 150% łamie dwuwierszowe refreny na telefonie.
@@ -293,11 +296,18 @@
     przyciskUsun.hidden = !!postep || !znanySpis || mediaStan.cached === 0;
   }
 
+  // Ustawienia są panelem aplikacji: w przeglądarce śpiewnik jest zwykłą
+  // stroną serwisu i nie ma po co stawiać przy pieśni przycisku, który
+  // przestawia motyw nakładany tylko po instalacji. Tryb offline jest tam
+  // zresztą tak samo bez sensu — z zakładki nie ma czego trzymać na telefonie.
+  // Sam service worker rejestrujemy dalej wszędzie: bez niego przeglądarka
+  // nie zaproponuje instalacji, a teksty i tak zapisuje po cichu.
+  //
   // Panel wstawiamy przed dotknięciem service workera. Odwrotna kolejność
   // znaczyłaby, że przeglądarka, która się na service workerze wywraca, zabiera
   // przy okazji ustawienia motywu i rozmiaru tekstu — a te z siecią nie mają
   // nic wspólnego.
-  zbudujUstawienia();
+  if (samodzielna) zbudujUstawienia();
 
   if (swObslugiwany) {
     navigator.serviceWorker.addEventListener('message', function (e) {
@@ -355,6 +365,15 @@
   if (location.pathname !== zakres) return;
 
   var KLUCZ_UKRYCIA = 'spiewnik-instalacja-ukryta';
+  // Znak „Udostępnij” z iOS: kwadrat, z którego górą wychodzi strzałka w górę.
+  // Nazwy przycisku w Safari nie widać — jest samą ikoną — więc instrukcja
+  // pokazuje ten sam rysunek, którego trzeba szukać na dole ekranu.
+  var IKONA_UDOSTEPNIJ = '<svg class="spiewnik-install__ikona" viewBox="0 0 24 24"'
+    + ' aria-hidden="true" focusable="false">'
+    + '<path d="M12 14.6V3.4"/>'
+    + '<path d="M8.4 7 12 3.4 15.6 7"/>'
+    + '<path d="M7.8 9.6H5.2v11.2h13.6V9.6h-2.6"/>'
+    + '</svg>';
   var waskie = window.matchMedia('(max-width: 820px)');
   var zdarzenie = null;
   var pasek = null;
@@ -365,11 +384,6 @@
     } catch (err) {
       return false; // tryb prywatny odmawia dostępu do localStorage
     }
-  }
-
-  function zainstalowany() {
-    return window.matchMedia('(display-mode: standalone)').matches
-      || navigator.standalone === true;
   }
 
   // Safari na iPhonie nie zna beforeinstallprompt — tam zostaje instrukcja.
@@ -385,7 +399,8 @@
     element.hidden = true;
     element.innerHTML = '<div class="spiewnik-install__body">'
       + '<p class="spiewnik-install__text">Śpiewnik działa też jako aplikacja — z tekstami dostępnymi offline.</p>'
-      + '<p class="spiewnik-install__hint" hidden>Na iPhonie: Udostępnij, potem «Do ekranu początkowego».</p>'
+      + '<p class="spiewnik-install__hint" hidden>Na iPhonie i iPadzie: Udostępnij '
+      + IKONA_UDOSTEPNIJ + ', potem «Do ekranu początkowego».</p>'
       + '</div>'
       + '<button type="button" class="button spiewnik-install__go" hidden>Zainstaluj aplikację</button>'
       + '<button type="button" class="spiewnik-install__close" aria-label="Zamknij">×</button>';
@@ -404,7 +419,9 @@
     });
 
     // Pod przyciskiem ustawień, nie nad nim: ustawienia są stałym elementem
-    // strony, a zachęta gościem, który po zamknięciu znika.
+    // strony, a zachęta gościem, który po zamknięciu znika. W przeglądarce,
+    // czyli wszędzie tam, gdzie ta zachęta w ogóle ma sens, przycisku ustawień
+    // nie ma — pasek staje wtedy na początku treści.
     var ustawienia = artykul.querySelector('.spiewnik-ust');
     artykul.insertBefore(element, ustawienia ? ustawienia.nextSibling : artykul.firstChild);
     return element;
@@ -413,7 +430,7 @@
   function odswiez() {
     // Przeglądarka, która ani nie umie zaprosić do instalacji, ani nie da się
     // poprowadzić ręcznie, nie ma tu nic do powiedzenia — i paska nie ma.
-    var warto = !ukryte() && !zainstalowany() && waskie.matches
+    var warto = !ukryte() && !samodzielna && waskie.matches
       && (zdarzenie !== null || iPhone());
     if (!warto) {
       if (pasek) pasek.hidden = true;

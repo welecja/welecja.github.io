@@ -51,19 +51,28 @@
           }
         };
 
-        // Zapamiętane „auto” po wcześniejszej wersji panelu nie ma już swojego
-        // przycisku, więc zostaje przy jasnym — tak samo jak pusta pamięć.
-        if (zPamieci(KLUCZ_MOTYW, 'light') === 'dark') api.motyw = 'dark';
-        api.rozmiar = parseInt(zPamieci(KLUCZ_ROZMIAR, '100'), 10) || 100;
-        api.zastosuj();
-
         // Zainstalowana aplikacja nie ma nagłówka serwisu — herb i menu chowa
         // arkusz, a ta klasa jest dla Safari na iPhonie, które display-mode w
         // @media zna dopiero od niedawna, a navigator.standalone od zawsze.
-        if (window.matchMedia('(display-mode: standalone)').matches
-          || navigator.standalone === true) {
-          el.classList.add('spiewnik-samodzielna');
+        // Stoi przed nałożeniem ustawień, bo rozstrzyga, czy w ogóle je nakładać,
+        // i jest jedynym miejscem, w którym się to rozpoznaje — app.js czyta już
+        // samą klasę.
+        var samodzielna = window.matchMedia('(display-mode: standalone)').matches
+          || navigator.standalone === true;
+        if (samodzielna) el.classList.add('spiewnik-samodzielna');
+
+        // Motyw i rozmiar tekstu są ustawieniami aplikacji, nie serwisu:
+        // w przeglądarce śpiewnik zostaje jasny i w naturalnej wielkości,
+        // choćby w pamięci stało co innego. Zapamiętanego nie kasujemy —
+        // należy do zainstalowanej aplikacji, a ta na iPhonie i tak ma własną
+        // pamięć, osobną od przeglądarki.
+        if (samodzielna) {
+          // Zapamiętane „auto” po wcześniejszej wersji panelu nie ma już swojego
+          // przycisku, więc zostaje przy jasnym — tak samo jak pusta pamięć.
+          if (zPamieci(KLUCZ_MOTYW, 'light') === 'dark') api.motyw = 'dark';
+          api.rozmiar = parseInt(zPamieci(KLUCZ_ROZMIAR, '100'), 10) || 100;
         }
+        api.zastosuj();
 
         return api;
       })();

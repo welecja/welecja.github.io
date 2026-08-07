@@ -396,6 +396,19 @@ html[data-spiewnik-theme] .article h1 {
   color: var(--spiewnik-cichy);
 }
 
+/* Znak „Udostępnij” wielkości wiersza i w jego barwie — stoi w zdaniu zamiast
+   nazwy przycisku, więc ma się czytać jak słowo, a nie jak obrazek. */
+.spiewnik-install__ikona {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.15em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Wysokość w px, jak w panelu ustawień: .45rem odstępu to na telefonie pięć
    pikseli i przycisk wychodził niższy, niż da się trafić kciukiem. */
 .spiewnik-install .spiewnik-install__go {
@@ -676,8 +689,11 @@ html[data-spiewnik-theme="dark"] .song__score {
    Śpiewnik z ekranu początkowego jest osobną aplikacją, a nie zakładką
    serwisu: herb i menu Welecji zabierają tam górę ekranu i prowadzą w miejsca,
    z których w oknie bez paska adresu nie ma czym wrócić. Zostaje więc sama
-   treść — odsyłacz powrotny, ustawienia i wyszukiwarka są na miejscu. W
-   przeglądarce nagłówek zostaje bez zmian.
+   treść — ustawienia i wyszukiwarka są na miejscu. W przeglądarce nagłówek
+   zostaje bez zmian.
+   Z tego samego powodu znika „← Dla Weletów” ze spisu pieśni: w aplikacji nie
+   ma dokąd tym wrócić, bo reszty serwisu w niej nie ma. Odsyłacze wewnątrz
+   Śpiewnika — „← Śpiewnik” przy pieśni i przy stronie o śpiewniku — zostają.
    Te same reguły dwa razy, bo Safari na iPhonie nie ustawia display-mode
    w @media i zna tylko navigator.standalone — klasę stawia po nim skrypt
    z nagłówka Śpiewnika, jeszcze przed pierwszym malowaniem. */
@@ -693,6 +709,10 @@ html[data-spiewnik-theme="dark"] .song__score {
   html[data-spiewnik-theme] .main {
     padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   }
+
+  html[data-spiewnik-theme] .spiewnik-powrot {
+    display: none;
+  }
 }
 
 html.spiewnik-samodzielna[data-spiewnik-theme] .header {
@@ -701,4 +721,8 @@ html.spiewnik-samodzielna[data-spiewnik-theme] .header {
 
 html.spiewnik-samodzielna[data-spiewnik-theme] .main {
   padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+}
+
+html.spiewnik-samodzielna[data-spiewnik-theme] .spiewnik-powrot {
+  display: none;
 }
