@@ -189,5 +189,8 @@ fonts:
   preconnect_urls:
     - https://fonts.gstatic.com
   font_urls:
-    - 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&family=Limelight&display=swap'
+    # Ten sam zestaw wag co @import w _sass/_settings.scss (300, nie 100):
+    # przy wadze 100 tekst całego serwisu robił się cieńszy niż dotychczas,
+    # bo body ma wagę 200 i przeglądarka wybiera najbliższą niższą.
+    - 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Limelight&display=swap'
 
