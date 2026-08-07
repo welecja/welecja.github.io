@@ -4,7 +4,7 @@ title: "Bracie wypij rad"
 song: true
 section: towarzyskie
 order: 113
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/bracie-wypij-rad/
+permalink: /spiewnik-viribus-unitis-1883/bracie-wypij-rad/
 sitemap: false
 indexing: false
 excerpt: "Bracie wypij rad — nuty i tekst ze Śpiewnika Weleckiego."

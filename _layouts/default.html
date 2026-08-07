@@ -26,15 +26,23 @@
         <link rel="preconnect" href="{{ url }}" crossorigin />
       {% endfor %}
     {% endif %}
+{%- comment -%}
+  Śpiewnik ma własny manifest: instalacja z ekranu początkowego ma otwierać spis
+  pieśni, a nie stronę główną Welecji. Warunki wpięte są w istniejące wiersze,
+  bez łamania linii, żeby strony publiczne wychodziły z builda co do bajta takie
+  same jak przed dodaniem aplikacji — rozbicie ich na osobne wiersze zmienia
+  każdą stronę serwisu.
+{% endcomment %}
 
-    <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+    <link rel="manifest" href="{% if page.spiewnik_app %}{{ "/spiewnik-viribus-unitis-1883/manifest.json" | relative_url }}{% else %}{{ "/manifest.json" | relative_url }}{% endif %}">{% if page.spiewnik_app %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/logos/spiewnik-icon-180.png" | relative_url }}">{% endif %}
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
 
     {% if site.css_inline == true %}
       {% include site-styles.html %}
     {% else %}
       <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
-    {% endif %}
+    {% endif %}{% if page.spiewnik_app %}{% include spiewnik-head.html %}{% endif %}
 
     {% if site.favicons or site.avatarurl %}{% include site-favicons.html %}{% endif %}
 
@@ -50,7 +58,7 @@
 
     {{ content }}
 
-    {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
+    {% if page.spiewnik_app %}{% include spiewnik-app.html %}{% elsif site.service_worker != false %}{% include site-sw.html %}{% endif %}
 
     {% include site-before-end.html %}
   </body>

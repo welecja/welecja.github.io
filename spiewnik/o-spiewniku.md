@@ -1,12 +1,12 @@
 ---
 title: O śpiewniku
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/o-spiewniku/
+permalink: /spiewnik-viribus-unitis-1883/o-spiewniku/
 sitemap: false
 indexing: false
 excerpt: "O Śpiewniku Weleckim (Warszawa 2010) — twórcy wydania, słowo wstępne i źródła."
 ---
 
-<a href="{{ '/bardzo-tajny-link-do-spiewnika-haslo1883/' | relative_url }}">&larr; Śpiewnik</a>
+<a href="{{ '/spiewnik-viribus-unitis-1883/' | relative_url }}">&larr; Śpiewnik</a>
 
 > *Od tych – co te piosenki zebrali,*  
 > *Dla tych – co śpiewać je zapominają.*

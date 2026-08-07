@@ -1,0 +1,544 @@
+/* Aplikacja Śpiewnika: panel ustawień, ciemny motyw i wygoda na telefonie.
+   Arkusz wchodzi tylko na stronach Śpiewnika, ale i tak każda reguła siedzi
+   pod html[data-spiewnik-theme] albo pod klasą .spiewnik-… — atrybut stawia
+   skrypt z nagłówka Śpiewnika, klasy wstawia app.js, więc żadna z tych reguł
+   nie ma jak dosięgnąć reszty serwisu, gdyby arkusz gdzieś zabłądził. */
+
+
+/* ——— Barwy ———
+   Jasny motyw powtarza barwy motywu strony; ciemny je zastępuje. Reszta pliku
+   pisze już tylko zmiennymi, więc każda rzecz ma jedno ustawienie na motyw. */
+
+html[data-spiewnik-theme] {
+  --spiewnik-tlo: #fff;
+  --spiewnik-plyta: #fafafa;
+  --spiewnik-tekst: #384743;
+  --spiewnik-naglowek: #242e2b;
+  --spiewnik-cichy: #666;
+  --spiewnik-ramka: #ccc;
+  --spiewnik-kreska: #e0e0e0;
+  --spiewnik-akcent: #005248;
+  --spiewnik-na-akcencie: #fff;
+  --spiewnik-link: #005f41;
+  --spiewnik-link-najazd: #008000;
+  color-scheme: light;
+}
+
+html[data-spiewnik-theme="dark"] {
+  --spiewnik-tlo: #1b201f;
+  --spiewnik-plyta: #232928;
+  --spiewnik-tekst: #d3dbd8;
+  --spiewnik-naglowek: #e8efec;
+  --spiewnik-cichy: #9aa4a1;
+  --spiewnik-ramka: #3d4744;
+  --spiewnik-kreska: #333b39;
+  --spiewnik-akcent: #7fc9a8;
+  --spiewnik-na-akcencie: #1b201f;
+  --spiewnik-link: #7fc9a8;
+  --spiewnik-link-najazd: #a6e0c4;
+  color-scheme: dark;
+  /* Tło na <html>, nie tylko na <body>: przy zwijaniu pasków przeglądarki i
+     przy odbiciu na końcu przewijania widać wtedy ciemne, a nie białe płótno. */
+  background: var(--spiewnik-tlo);
+}
+
+
+/* ——— Rozmiar tekstu ———
+   Motyw strony wymierzony jest w rem co do jednej wartości, więc jedynym
+   miejscem, w którym da się nim poruszyć, jest font-size elementu <html>.
+   Procenty poniżej to te same wartości, które wylicza $rootsizes ze
+   _sass/sassline-base/_variables.scss, a progi — te same breakpointy; przy
+   --spiewnik-skala równym 1 strona wygląda co do piksela jak przed zmianą.
+   Skalę stawia inline'em skrypt z nagłówka, jeszcze przed pierwszym
+   malowaniem, więc tekst nie skacze po wczytaniu strony. */
+
+html[data-spiewnik-theme] { font-size: calc(75% * var(--spiewnik-skala, 1)); }
+
+@media screen and (min-width: 40em) {
+  html[data-spiewnik-theme] { font-size: calc(87.5% * var(--spiewnik-skala, 1)); }
+}
+
+@media screen and (min-width: 50em) {
+  html[data-spiewnik-theme] { font-size: calc(93.75% * var(--spiewnik-skala, 1)); }
+}
+
+@media screen and (min-width: 64em) {
+  html[data-spiewnik-theme] { font-size: calc(106.25% * var(--spiewnik-skala, 1)); }
+}
+
+@media screen and (min-width: 100em) {
+  html[data-spiewnik-theme] { font-size: calc(118.75% * var(--spiewnik-skala, 1)); }
+}
+
+/* Przy 150% na telefonie do kolumny przestają się mieścić najdłuższe pojedyncze
+   słowa — tytuł „Gaudeamus…” i nazwy w spisie źródeł — i cała strona zaczyna
+   jeździć na boki. Łamiemy je dopiero wtedy, gdy nie ma innego wyjścia: przy
+   100% nic się od tej reguły nie zmienia. */
+html[data-spiewnik-theme] .article {
+  overflow-wrap: break-word;
+}
+
+/* Tytuł jest osobno, bo motyw układa go flexem obok cyrkla, a element flexowy
+   nie zwęża się poniżej najdłuższego słowa — break-word sam go tam nie łamie.
+   „anywhere” liczy się już przy wyznaczaniu tej szerokości, więc „Gaudeamus…”
+   przechodzi do drugiego wiersza zamiast wypychać stronę poza ekran. */
+html[data-spiewnik-theme] .article h1 {
+  overflow-wrap: anywhere;
+}
+
+
+/* ——— Panel ustawień ———
+   Wstawia go app.js na czele artykułu, tuż nad odsyłaczem powrotnym. Zwinięty
+   jest jedną linijką z prawej: kto przyszedł po tekst pieśni, ma go nie
+   zauważyć. Ubranie jak w polu wyszukiwarki — ramka 1px i promień 2px. */
+
+/* Reguła [hidden] { display: none } pochodzi z arkusza przeglądarki, więc
+   przegrywa z każdą regułą arkusza strony. Wszystko, co tu chowamy atrybutem,
+   musi więc mieć własną regułę — inaczej zwinięty panel zostaje na ekranie. */
+.spiewnik-ust__panel[hidden],
+.spiewnik-ust__stan[hidden],
+.spiewnik-ust__pobierz[hidden],
+.spiewnik-ust__usun[hidden] {
+  display: none;
+}
+
+.spiewnik-ust {
+  margin: 0 0 1.2rem;
+  text-align: right;
+}
+
+/* Dwie klasy, bo motyw maluje każdy przycisk wewnątrz .typeset na biało i na
+   zielono regułą .typeset button — pojedyncza klasa jej nie przebija. */
+.spiewnik-ust .spiewnik-ust__przelacznik {
+  margin: 0;
+  padding: .4rem .8rem;
+  min-height: 44px;
+  font-size: .8em;
+  line-height: 1.4;
+  color: var(--spiewnik-cichy);
+  background: none;
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.spiewnik-ust .spiewnik-ust__przelacznik:hover,
+.spiewnik-ust .spiewnik-ust__przelacznik:focus {
+  color: var(--spiewnik-akcent);
+  border-color: var(--spiewnik-akcent);
+  background: none;
+  box-shadow: none;
+}
+
+.spiewnik-ust__panel {
+  display: block;
+  margin: .6rem 0 0;
+  padding: .1rem .9rem;
+  text-align: left;
+  background: var(--spiewnik-plyta);
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+}
+
+.spiewnik-ust__wiersz {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .4rem .9rem;
+  padding: .7rem 0;
+}
+
+.spiewnik-ust__wiersz + .spiewnik-ust__wiersz {
+  border-top: 1px solid var(--spiewnik-kreska);
+}
+
+.spiewnik-ust__wiersz--offline {
+  align-items: flex-start;
+}
+
+.spiewnik-ust__etykieta {
+  font-size: .85em;
+  line-height: 1.5;
+  color: var(--spiewnik-tekst);
+}
+
+.spiewnik-ust__grupa {
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--spiewnik-tlo);
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Wysokości i szerokości celów dotyku w px, nie w rem: rem chodzi tu za
+   ustawieniem „Rozmiar tekstu”, a przycisk ma być dobry pod kciuk także wtedy,
+   gdy ktoś zmniejszy tekst do 85%. */
+.spiewnik-ust .spiewnik-ust__opcja {
+  margin: 0;
+  padding: .4rem .7rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: .8em;
+  line-height: 1.4;
+  color: var(--spiewnik-tekst);
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.spiewnik-ust .spiewnik-ust__opcja + .spiewnik-ust__opcja,
+.spiewnik-ust .spiewnik-ust__wartosc + .spiewnik-ust__opcja {
+  border-left: 1px solid var(--spiewnik-ramka);
+}
+
+.spiewnik-ust .spiewnik-ust__opcja:hover,
+.spiewnik-ust .spiewnik-ust__opcja:focus {
+  color: var(--spiewnik-akcent);
+  background: var(--spiewnik-plyta);
+  box-shadow: none;
+}
+
+.spiewnik-ust .spiewnik-ust__opcja[aria-pressed="true"] {
+  color: var(--spiewnik-na-akcencie);
+  background: var(--spiewnik-akcent);
+}
+
+.spiewnik-ust .spiewnik-ust__opcja:disabled {
+  color: var(--spiewnik-cichy);
+  background: none;
+  opacity: .45;
+  cursor: default;
+}
+
+.spiewnik-ust__wartosc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 0 .4rem;
+  font-size: .8em;
+  color: var(--spiewnik-tekst);
+  border-left: 1px solid var(--spiewnik-ramka);
+}
+
+.spiewnik-ust__offline {
+  flex: 1 1 14rem;
+  text-align: left;
+}
+
+.spiewnik-ust__stan {
+  display: block;
+  font-size: .8em;
+  line-height: 1.5;
+  color: var(--spiewnik-cichy);
+}
+
+.spiewnik-ust__akcje {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.spiewnik-ust .spiewnik-ust__pobierz {
+  margin: .5rem 0 0;
+  padding: .45rem 1rem;
+  min-height: 44px;
+  font-size: .8em;
+  line-height: 1.4;
+  color: var(--spiewnik-na-akcencie);
+  background: var(--spiewnik-akcent);
+  border-radius: 2px;
+}
+
+.spiewnik-ust .spiewnik-ust__usun {
+  margin: .5rem 0 0;
+  padding: .45rem .8rem;
+  min-height: 44px;
+  font-size: .8em;
+  line-height: 1.4;
+  color: var(--spiewnik-cichy);
+  background: none;
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.spiewnik-ust .spiewnik-ust__usun:hover,
+.spiewnik-ust .spiewnik-ust__usun:focus {
+  color: var(--spiewnik-akcent);
+  border-color: var(--spiewnik-akcent);
+  background: none;
+  box-shadow: none;
+}
+
+
+/* ——— Pasek zachęty do instalacji ———
+   Wstawia go app.js, więc tu jest samo ubranie: papierowe tło, ramka i promień
+   jak w polu wyszukiwarki pieśni. */
+
+/* Ta sama sprawa co wyżej: [hidden] z arkusza przeglądarki przegrywa z
+   display, który ustawia motyw i ten plik. Bez tych reguł zamknięty pasek
+   zostawał na ekranie, a na iPhonie obok instrukcji stał przycisk instalacji,
+   którego ta przeglądarka nie obsługuje. */
+.spiewnik-install[hidden],
+.spiewnik-install__go[hidden],
+.spiewnik-install__hint[hidden] {
+  display: none;
+}
+
+.spiewnik-install {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 1.8rem;
+  padding: .7rem .9rem;
+  background: var(--spiewnik-plyta);
+  border: 1px solid var(--spiewnik-ramka);
+  border-radius: 2px;
+}
+
+.spiewnik-install__body {
+  flex: 1 1 12rem;
+  margin-right: .8rem;
+}
+
+.spiewnik-install__text {
+  margin: 0;
+  font-size: .85em;
+  line-height: 1.5;
+}
+
+.spiewnik-install__hint {
+  margin: .4rem 0 0;
+  font-size: .8em;
+  line-height: 1.5;
+  color: var(--spiewnik-cichy);
+}
+
+.spiewnik-install .spiewnik-install__go {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: .45rem 1rem;
+  font-size: .8em;
+  color: var(--spiewnik-na-akcencie);
+  background: var(--spiewnik-akcent);
+}
+
+/* Dwie klasy, bo motyw maluje każdy przycisk wewnątrz .typeset na biało
+   regułą .typeset button — pojedyncza klasa jej nie przebija i krzyżyk
+   znikał, biały na białym tle. Odstęp w em, nie w rem: rem jest w tym
+   motywie mniejszy na telefonie, a to właśnie tam trzeba w krzyżyk trafić
+   kciukiem. */
+.spiewnik-install .spiewnik-install__close {
+  flex: 0 0 auto;
+  margin: 0 -.4rem 0 .3rem;
+  padding: .45em .6em;
+  font-size: 1.2em;
+  line-height: 1;
+  color: var(--spiewnik-cichy);
+  background: none;
+}
+
+.spiewnik-install .spiewnik-install__close:hover,
+.spiewnik-install .spiewnik-install__close:focus {
+  color: var(--spiewnik-akcent);
+  background: none;
+  box-shadow: none;
+}
+
+
+/* ——— Ciemny motyw ———
+   Tylko to, co motyw strony maluje na sztywno. Nuty i herb zostają takie,
+   jakie są — to skany na białym papierze; wolno je co najwyżej przygasić,
+   odwrócić nigdy, bo z pięciolinii robi się wtedy negatyw. */
+
+html[data-spiewnik-theme="dark"] body {
+  background: var(--spiewnik-tlo);
+  color: var(--spiewnik-tekst);
+}
+
+html[data-spiewnik-theme="dark"] .typeset h1,
+html[data-spiewnik-theme="dark"] .typeset h2,
+html[data-spiewnik-theme="dark"] .typeset h3,
+html[data-spiewnik-theme="dark"] .typeset h4,
+html[data-spiewnik-theme="dark"] .typeset h5,
+html[data-spiewnik-theme="dark"] .typeset h6 {
+  color: var(--spiewnik-naglowek);
+}
+
+html[data-spiewnik-theme="dark"] a {
+  color: var(--spiewnik-link);
+}
+
+html[data-spiewnik-theme="dark"] a:hover,
+html[data-spiewnik-theme="dark"] a:active,
+html[data-spiewnik-theme="dark"] a:focus {
+  color: var(--spiewnik-link-najazd);
+}
+
+/* Odsyłacze w nagłówku i stopce motyw celowo maluje kolorem tekstu, a nie
+   kolorem linków — reguła wyżej odbierałaby im to i menu świeciłoby zielenią,
+   której w jasnym motywie nie ma. */
+html[data-spiewnik-theme="dark"] .nav a,
+html[data-spiewnik-theme="dark"] .nav a:hover,
+html[data-spiewnik-theme="dark"] .nav a:focus {
+  color: inherit;
+}
+
+/* Podkreślenia linków w tekście motyw rysuje tłem, a przerwy na wystające
+   litery wycina cieniem w kolorze tła strony — cień musi więc pociemnieć
+   razem z nią, inaczej każde „g” i „y” dostaje białą obwódkę. */
+html[data-spiewnik-theme="dark"] .typeset p a,
+html[data-spiewnik-theme="dark"] .typeset li a {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--spiewnik-link) 50%);
+  text-shadow: .1rem 0 var(--spiewnik-tlo), .15rem 0 var(--spiewnik-tlo),
+               -.1rem 0 var(--spiewnik-tlo), -.15rem 0 var(--spiewnik-tlo);
+}
+
+html[data-spiewnik-theme="dark"] .typeset p a:hover,
+html[data-spiewnik-theme="dark"] .typeset p a:active,
+html[data-spiewnik-theme="dark"] .typeset p a:focus,
+html[data-spiewnik-theme="dark"] .typeset li a:hover,
+html[data-spiewnik-theme="dark"] .typeset li a:active,
+html[data-spiewnik-theme="dark"] .typeset li a:focus {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--spiewnik-link-najazd) 50%);
+}
+
+html[data-spiewnik-theme="dark"] .typeset blockquote p {
+  border-left-color: var(--spiewnik-link);
+}
+
+/* Cyrkiel przed każdym tytułem to czarna kreska na przezroczystym tle — na
+   ciemnym znika zupełnie. Odwrócenie jest tu na miejscu, bo z rysunku
+   jednobarwnego wychodzi biała kreska; skanów nut odwracać nie wolno, bo tam
+   robi się z tego negatyw pięciolinii. */
+html[data-spiewnik-theme="dark"] .typeset h1::before {
+  filter: invert(1);
+}
+
+html[data-spiewnik-theme="dark"] code {
+  color: var(--spiewnik-naglowek);
+}
+
+/* Obrys ogniska motywu to ciemna wiśnia — na ciemnym tle nie widać go wcale,
+   a to jedyny znak, gdzie stoi kursor przy chodzeniu tabulatorem. */
+html[data-spiewnik-theme="dark"] a:focus,
+html[data-spiewnik-theme="dark"] button:focus,
+html[data-spiewnik-theme="dark"] input:focus,
+html[data-spiewnik-theme="dark"] select:focus,
+html[data-spiewnik-theme="dark"] textarea:focus {
+  outline-color: var(--spiewnik-akcent);
+}
+
+html[data-spiewnik-theme="dark"] ::selection {
+  background: var(--spiewnik-akcent);
+  color: var(--spiewnik-tlo);
+}
+
+html[data-spiewnik-theme="dark"] .button--nav {
+  color: var(--spiewnik-link);
+}
+
+html[data-spiewnik-theme="dark"] .button--nav:hover,
+html[data-spiewnik-theme="dark"] .button--nav:focus {
+  color: var(--spiewnik-link-najazd);
+}
+
+html[data-spiewnik-theme="dark"] .logo img {
+  filter: brightness(.9);
+}
+
+html[data-spiewnik-theme="dark"] .footer {
+  background: #151918;
+  color: var(--spiewnik-cichy);
+}
+
+html[data-spiewnik-theme="dark"] .footer a {
+  color: var(--spiewnik-cichy);
+}
+
+html[data-spiewnik-theme="dark"] .footer a:hover {
+  color: var(--spiewnik-naglowek);
+}
+
+html[data-spiewnik-theme="dark"] .small {
+  color: var(--spiewnik-cichy);
+}
+
+html[data-spiewnik-theme="dark"] .song-search__input {
+  color: var(--spiewnik-tekst);
+  background: var(--spiewnik-plyta);
+  border-color: var(--spiewnik-ramka);
+}
+
+html[data-spiewnik-theme="dark"] .song-search__input:hover,
+html[data-spiewnik-theme="dark"] .song-search__input:focus {
+  border-color: var(--spiewnik-akcent);
+}
+
+html[data-spiewnik-theme="dark"] .song-search__none,
+html[data-spiewnik-theme="dark"] .song__rec-note,
+html[data-spiewnik-theme="dark"] .song__copyright {
+  color: var(--spiewnik-cichy);
+}
+
+html[data-spiewnik-theme="dark"] .song__lyrics-text {
+  border-left-color: var(--spiewnik-ramka);
+}
+
+html[data-spiewnik-theme="dark"] .song__score {
+  border-color: var(--spiewnik-kreska);
+  filter: brightness(.9);
+}
+
+/* Rozwijane menu w nagłówku jest białą kartką dopiero od 640px — na węższym
+   ekranie to zwykła lista i żadnego tła nie ma. */
+@media screen and (min-width: 640px) {
+  html[data-spiewnik-theme="dark"] .list--dropdown {
+    background: var(--spiewnik-plyta);
+    border-color: rgba(255, 255, 255, .12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
+  }
+
+  html[data-spiewnik-theme="dark"] .list--dropdown a:hover {
+    background: rgba(255, 255, 255, .06);
+  }
+}
+
+
+/* ——— Telefon ———
+   Te same barwy i kroje, tylko wygodniej pod kciuk. Próg 40em to ten sam
+   break-1, na którym motyw strony przestawia się na układ dla dużych ekranów. */
+
+@media screen and (max-width: 39.99em) {
+  /* iOS przybliża stronę przy wejściu w pole o tekście mniejszym niż 16px,
+     a po przybliżeniu spis pieśni nie mieści się już w szerokości ekranu. */
+  html[data-spiewnik-theme] .song-search__input {
+    font-size: max(16px, 1em);
+    min-height: 44px;
+  }
+
+  /* Pozycje spisu i odsyłacz powrotny jako cele dotyku wysokie na 44px.
+     Podkreślenie linku motyw rysuje tłem elementu, więc obszar tła liczymy
+     od pola treści — inaczej kreska zjeżdża pod dodany odstęp. */
+  html[data-spiewnik-theme] .song-list li {
+    margin: 0;
+  }
+
+  html[data-spiewnik-theme] .song-list li a,
+  html[data-spiewnik-theme] .article > p:first-of-type > a {
+    padding: 10px 0;
+    background-origin: content-box;
+  }
+
+  html[data-spiewnik-theme] .song-list li a {
+    display: block;
+  }
+
+  html[data-spiewnik-theme] .article > p:first-of-type > a {
+    display: inline-block;
+  }
+}

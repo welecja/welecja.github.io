@@ -4,7 +4,7 @@ title: "Edite, bibite"
 song: true
 section: towarzyskie
 order: 176
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/edite-bibite/
+permalink: /spiewnik-viribus-unitis-1883/edite-bibite/
 sitemap: false
 indexing: false
 excerpt: "Edite, bibite — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Przysięga"
 song: true
 section: towarzyskie
 order: 234
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/przysiega/
+permalink: /spiewnik-viribus-unitis-1883/przysiega/
 sitemap: false
 indexing: false
 excerpt: "Przysięga — nuty i tekst ze Śpiewnika Weleckiego."

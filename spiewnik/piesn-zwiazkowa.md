@@ -4,7 +4,7 @@ title: "Pieśń związkowa"
 song: true
 section: towarzyskie
 order: 46
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-zwiazkowa/
+permalink: /spiewnik-viribus-unitis-1883/piesn-zwiazkowa/
 sitemap: false
 indexing: false
 excerpt: "Pieśń związkowa — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

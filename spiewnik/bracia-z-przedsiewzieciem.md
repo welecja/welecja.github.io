@@ -4,7 +4,7 @@ title: "Bracia z przedsięwzięciem"
 song: true
 section: towarzyskie
 order: 225
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/bracia-z-przedsiewzieciem/
+permalink: /spiewnik-viribus-unitis-1883/bracia-z-przedsiewzieciem/
 sitemap: false
 indexing: false
 excerpt: "Bracia z przedsięwzięciem — nuty i tekst ze Śpiewnika Weleckiego."

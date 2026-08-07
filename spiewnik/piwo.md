@@ -4,7 +4,7 @@ title: "Piwo"
 song: true
 section: towarzyskie
 order: 164
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piwo/
+permalink: /spiewnik-viribus-unitis-1883/piwo/
 sitemap: false
 indexing: false
 excerpt: "Piwo — nuty i tekst ze Śpiewnika Weleckiego."

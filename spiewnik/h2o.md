@@ -4,7 +4,7 @@ title: "H2O"
 song: true
 section: towarzyskie
 order: 201
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/h2o/
+permalink: /spiewnik-viribus-unitis-1883/h2o/
 sitemap: false
 indexing: false
 excerpt: "H2O — nuty i tekst ze Śpiewnika Weleckiego."

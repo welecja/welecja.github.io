@@ -4,7 +4,7 @@ title: "Przeminął panowania burszów czas…"
 song: true
 section: towarzyskie
 order: 171
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/przeminal-panowania-burszow-czas/
+permalink: /spiewnik-viribus-unitis-1883/przeminal-panowania-burszow-czas/
 sitemap: false
 indexing: false
 excerpt: "Przeminął panowania burszów czas… — nuty i tekst ze Śpiewnika Weleckiego."

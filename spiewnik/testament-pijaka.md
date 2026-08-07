@@ -4,7 +4,7 @@ title: "Testament pijaka"
 song: true
 section: towarzyskie
 order: 128
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/testament-pijaka/
+permalink: /spiewnik-viribus-unitis-1883/testament-pijaka/
 sitemap: false
 indexing: false
 excerpt: "Testament pijaka — nuty i tekst ze Śpiewnika Weleckiego."

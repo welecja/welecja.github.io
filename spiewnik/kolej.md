@@ -4,7 +4,7 @@ title: "Kolej"
 song: true
 section: towarzyskie
 order: 125
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/kolej/
+permalink: /spiewnik-viribus-unitis-1883/kolej/
 sitemap: false
 indexing: false
 excerpt: "Kolej — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Upić się warto"
 song: true
 section: towarzyskie
 order: 256
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/upic-sie-warto/
+permalink: /spiewnik-viribus-unitis-1883/upic-sie-warto/
 sitemap: false
 indexing: false
 excerpt: "Upić się warto — nuty i tekst ze Śpiewnika Weleckiego."

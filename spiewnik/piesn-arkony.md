@@ -4,7 +4,7 @@ title: "Pieśń Arkony"
 song: true
 section: oficjalne
 order: 23
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-arkony/
+permalink: /spiewnik-viribus-unitis-1883/piesn-arkony/
 sitemap: false
 indexing: false
 excerpt: "Pieśń Arkony — nuty i tekst ze Śpiewnika Weleckiego."

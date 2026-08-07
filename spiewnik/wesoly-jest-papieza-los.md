@@ -4,7 +4,7 @@ title: "Wesoły jest papieża los"
 song: true
 section: towarzyskie
 order: 150
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/wesoly-jest-papieza-los/
+permalink: /spiewnik-viribus-unitis-1883/wesoly-jest-papieza-los/
 sitemap: false
 indexing: false
 excerpt: "Wesoły jest papieża los — nuty i tekst ze Śpiewnika Weleckiego."

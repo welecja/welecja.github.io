@@ -4,7 +4,7 @@ title: "Siądźmy bracia czamarowi"
 song: true
 section: towarzyskie
 order: 239
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/siadzmy-bracia-czamarowi/
+permalink: /spiewnik-viribus-unitis-1883/siadzmy-bracia-czamarowi/
 sitemap: false
 indexing: false
 excerpt: "Siądźmy bracia czamarowi — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Gaudeamus…"
 song: true
 section: towarzyskie
 order: 32
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/gaudeamus/
+permalink: /spiewnik-viribus-unitis-1883/gaudeamus/
 sitemap: false
 indexing: false
 excerpt: "Gaudeamus… — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Śpiew burszów polskich"
 song: true
 section: towarzyskie
 order: 187
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/spiew-burszow-polskich/
+permalink: /spiewnik-viribus-unitis-1883/spiew-burszow-polskich/
 sitemap: false
 indexing: false
 excerpt: "Śpiew burszów polskich — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Stańmy bracia wraz"
 song: true
 section: towarzyskie
 order: 207
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/stanmy-bracia-wraz/
+permalink: /spiewnik-viribus-unitis-1883/stanmy-bracia-wraz/
 sitemap: false
 indexing: false
 excerpt: "Stańmy bracia wraz — nuty i tekst ze Śpiewnika Weleckiego."

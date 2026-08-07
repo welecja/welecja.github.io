@@ -4,7 +4,7 @@ title: "Toast IV"
 song: true
 section: towarzyskie
 order: 120
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-4/
+permalink: /spiewnik-viribus-unitis-1883/toast-4/
 sitemap: false
 indexing: false
 excerpt: "Toast IV — nuty i tekst ze Śpiewnika Weleckiego."

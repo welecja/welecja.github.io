@@ -4,7 +4,7 @@ title: "Noe I"
 song: true
 section: towarzyskie
 order: 157
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/noe-1/
+permalink: /spiewnik-viribus-unitis-1883/noe-1/
 sitemap: false
 indexing: false
 excerpt: "Noe I — nuty i tekst ze Śpiewnika Weleckiego."

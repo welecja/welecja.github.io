@@ -4,7 +4,7 @@ title: "Jedność"
 song: true
 section: towarzyskie
 order: 215
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/jednosc/
+permalink: /spiewnik-viribus-unitis-1883/jednosc/
 sitemap: false
 indexing: false
 excerpt: "Jedność — nuty i tekst ze Śpiewnika Weleckiego."

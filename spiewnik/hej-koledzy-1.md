@@ -4,7 +4,7 @@ title: "Hej! Koledzy I"
 song: true
 section: towarzyskie
 order: 96
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hej-koledzy-1/
+permalink: /spiewnik-viribus-unitis-1883/hej-koledzy-1/
 sitemap: false
 indexing: false
 excerpt: "Hej! Koledzy I — nuty i tekst ze Śpiewnika Weleckiego."

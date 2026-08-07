@@ -4,7 +4,7 @@ title: "Pieśń fuksowska K! Polonia"
 song: true
 section: towarzyskie
 order: 248
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-fuksowska-polonia/
+permalink: /spiewnik-viribus-unitis-1883/piesn-fuksowska-polonia/
 sitemap: false
 indexing: false
 excerpt: "Pieśń fuksowska K! Polonia — nuty i tekst ze Śpiewnika Weleckiego."

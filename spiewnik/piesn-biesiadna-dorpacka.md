@@ -4,7 +4,7 @@ title: "Pieśń (biesiadna) dorpacka"
 song: true
 section: towarzyskie
 order: 83
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-biesiadna-dorpacka/
+permalink: /spiewnik-viribus-unitis-1883/piesn-biesiadna-dorpacka/
 sitemap: false
 indexing: false
 excerpt: "Pieśń (biesiadna) dorpacka — nuty i tekst ze Śpiewnika Weleckiego."

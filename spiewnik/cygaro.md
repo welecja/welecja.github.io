@@ -4,7 +4,7 @@ title: "Cygaro (Piosenka dorpacka)"
 song: true
 section: towarzyskie
 order: 111
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/cygaro/
+permalink: /spiewnik-viribus-unitis-1883/cygaro/
 sitemap: false
 indexing: false
 excerpt: "Cygaro (Piosenka dorpacka) — nuty i tekst ze Śpiewnika Weleckiego."

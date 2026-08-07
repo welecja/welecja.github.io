@@ -4,7 +4,7 @@ title: "Toast VI"
 song: true
 section: towarzyskie
 order: 122
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-6/
+permalink: /spiewnik-viribus-unitis-1883/toast-6/
 sitemap: false
 indexing: false
 excerpt: "Toast VI — nuty i tekst ze Śpiewnika Weleckiego."

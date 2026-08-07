@@ -35,8 +35,8 @@ Nagrania, nuty i teksty pieśni weleckich. Dostęp na hasło.
   // brama: adres docelowy zaszyfrowany AES-GCM kluczem z hasła (PBKDF2);
   // poprawne hasło = udane odszyfrowanie, adres nie występuje w źródle strony
   var GATE_ENTRIES = [
-    {"salt":"LJmQzQCvXU+DgIF1ev9fkg==","iv":"Vwz3PblmXEmstb2n","ct":"EUvpLACoQ/tQLVAFYcJjlW9F4qMTZdQPfAkgZKcwzrj+OerNTVsrbMuQMONVoroxABDqV3EiEkSG8Q=="},
-    {"salt":"w/qg/yCTq/RBLrRZTYVcCA==","iv":"a6YWM2sDAT2PUYzJ","ct":"l/B2ZptMebO+V/3H4y0+/xzzdeoNCi+4nbVVwc4ZGFhgLIdYhxMgkXEJzck2jV9WiAIcdiRjiX4jAg=="}
+    {"salt":"v+mL70hfNlqLrrCHtQkFZg==","iv":"jt6CRj3pSYmVx8em","ct":"l2QYNn1SlZ/gigeTdtwptahnh++WofiZoIv3eqRG+KxYkcAHQIrdGSbBzPOzBQ=="},
+    {"salt":"W/qCTM3f2T+3AyyZIvSIIA==","iv":"FCNnJVwzBBp82eI1","ct":"4OHtF2wHnJi7jhPlgHscbLPcau2wc4LgoD2kfS9hGQcq0Rz42GCcdEkn9n0Nhw=="}
   ];
   function b2u(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
   async function odszyfruj(pw, e) {

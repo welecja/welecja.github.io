@@ -4,7 +4,7 @@ title: "Gdy człek w taniec polski stanie"
 song: true
 section: towarzyskie
 order: 100
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/gdy-czlek-w-polski-taniec-stanie/
+permalink: /spiewnik-viribus-unitis-1883/gdy-czlek-w-polski-taniec-stanie/
 sitemap: false
 indexing: false
 excerpt: "Gdy człek w taniec polski stanie (Polonez rycerski) — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

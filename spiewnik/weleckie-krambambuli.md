@@ -4,7 +4,7 @@ title: "Weleckie Krambambuli"
 song: true
 section: towarzyskie
 order: 133
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/weleckie-krambambuli/
+permalink: /spiewnik-viribus-unitis-1883/weleckie-krambambuli/
 sitemap: false
 indexing: false
 excerpt: "Weleckie Krambambuli — nuty i tekst ze Śpiewnika Weleckiego."

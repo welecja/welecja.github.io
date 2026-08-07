@@ -4,7 +4,7 @@ title: "Pieśń towarzyska"
 song: true
 section: towarzyskie
 order: 205
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-towarzyska/
+permalink: /spiewnik-viribus-unitis-1883/piesn-towarzyska/
 sitemap: false
 indexing: false
 excerpt: "Pieśń towarzyska — nuty i tekst ze Śpiewnika Weleckiego."

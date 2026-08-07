@@ -4,7 +4,7 @@ title: "Pieśń Filaretów"
 song: true
 section: towarzyskie
 order: 56
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-filaretow/
+permalink: /spiewnik-viribus-unitis-1883/piesn-filaretow/
 sitemap: false
 indexing: false
 excerpt: "Pieśń Filaretów (Adam Mickiewicz) — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

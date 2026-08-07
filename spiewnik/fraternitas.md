@@ -4,7 +4,7 @@ title: "Fraternitas — Pieśń braterstwa"
 song: true
 section: towarzyskie
 order: 49
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/fraternitas/
+permalink: /spiewnik-viribus-unitis-1883/fraternitas/
 sitemap: false
 indexing: false
 excerpt: "Fraternitas — Pieśń braterstwa — nuty i tekst ze Śpiewnika Weleckiego."

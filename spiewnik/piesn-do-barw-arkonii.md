@@ -4,7 +4,7 @@ title: "Pieśń do barw Arkonii"
 song: true
 section: oficjalne
 order: 20
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-do-barw-arkonii/
+permalink: /spiewnik-viribus-unitis-1883/piesn-do-barw-arkonii/
 sitemap: false
 indexing: false
 excerpt: "Pieśń do barw Arkonii — nuty i tekst ze Śpiewnika Weleckiego."

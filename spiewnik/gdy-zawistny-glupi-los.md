@@ -4,7 +4,7 @@ title: "Gdy zawistny, głupi los"
 song: true
 section: towarzyskie
 order: 142
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/gdy-zawistny-glupi-los/
+permalink: /spiewnik-viribus-unitis-1883/gdy-zawistny-glupi-los/
 sitemap: false
 indexing: false
 excerpt: "Gdy zawistny, głupi los — nuty i tekst ze Śpiewnika Weleckiego."

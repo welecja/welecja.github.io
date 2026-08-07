@@ -4,7 +4,7 @@ title: "Studenckie życie II"
 song: true
 section: towarzyskie
 order: 144
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/studenckie-zycie-2/
+permalink: /spiewnik-viribus-unitis-1883/studenckie-zycie-2/
 sitemap: false
 indexing: false
 excerpt: "Studenckie życie II — nuty i tekst ze Śpiewnika Weleckiego."

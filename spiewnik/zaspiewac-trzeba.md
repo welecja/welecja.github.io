@@ -4,7 +4,7 @@ title: "Zaśpiewać trzeba (Edite, bibite II)"
 song: true
 section: towarzyskie
 order: 227
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/zaspiewac-trzeba/
+permalink: /spiewnik-viribus-unitis-1883/zaspiewac-trzeba/
 sitemap: false
 indexing: false
 excerpt: "Zaśpiewać trzeba (Edite, bibite II) — nuty i tekst ze Śpiewnika Weleckiego."

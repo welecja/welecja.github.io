@@ -4,7 +4,7 @@ title: "Hymn Jagiellonii"
 song: true
 section: oficjalne
 order: 16
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hymn-jagiellonii/
+permalink: /spiewnik-viribus-unitis-1883/hymn-jagiellonii/
 sitemap: false
 indexing: false
 excerpt: "Hymn K! Jagiellonia — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Charaktery Bursza"
 song: true
 section: towarzyskie
 order: 210
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/charaktery-bursza/
+permalink: /spiewnik-viribus-unitis-1883/charaktery-bursza/
 sitemap: false
 indexing: false
 excerpt: "Charaktery Bursza — nuty i tekst ze Śpiewnika Weleckiego."

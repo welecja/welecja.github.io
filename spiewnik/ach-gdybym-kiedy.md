@@ -4,7 +4,7 @@ title: "Ach gdybym kiedy…"
 song: true
 section: towarzyskie
 order: 135
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/ach-gdybym-kiedy/
+permalink: /spiewnik-viribus-unitis-1883/ach-gdybym-kiedy/
 sitemap: false
 indexing: false
 excerpt: "Ach gdybym kiedy… — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Od granic gdzie żył Lech"
 song: true
 section: towarzyskie
 order: 152
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/od-granic-gdzie-zyl-lech/
+permalink: /spiewnik-viribus-unitis-1883/od-granic-gdzie-zyl-lech/
 sitemap: false
 indexing: false
 excerpt: "Od granic gdzie żył Lech — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Pieśń pożegnalna"
 song: true
 section: towarzyskie
 order: 51
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-pozegnalna/
+permalink: /spiewnik-viribus-unitis-1883/piesn-pozegnalna/
 sitemap: false
 indexing: false
 excerpt: "Pieśń pożegnalna — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Pieśń semestrów"
 song: true
 section: towarzyskie
 order: 209
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-semestrow/
+permalink: /spiewnik-viribus-unitis-1883/piesn-semestrow/
 sitemap: false
 indexing: false
 excerpt: "Pieśń semestrów — nuty i tekst ze Śpiewnika Weleckiego."

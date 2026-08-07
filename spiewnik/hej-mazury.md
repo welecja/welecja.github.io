@@ -4,7 +4,7 @@ title: "Hej Mazury"
 song: true
 section: towarzyskie
 order: 108
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hej-mazury/
+permalink: /spiewnik-viribus-unitis-1883/hej-mazury/
 sitemap: false
 indexing: false
 excerpt: "Hej Mazury — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Ergo bibamus"
 song: true
 section: towarzyskie
 order: 192
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/ergo-bibamus/
+permalink: /spiewnik-viribus-unitis-1883/ergo-bibamus/
 sitemap: false
 indexing: false
 excerpt: "Ergo bibamus — nuty i tekst ze Śpiewnika Weleckiego."

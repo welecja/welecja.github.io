@@ -4,7 +4,7 @@ title: "Przy winie (Oj ciąg, ciąg)"
 song: true
 section: towarzyskie
 order: 191
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/przy-winie/
+permalink: /spiewnik-viribus-unitis-1883/przy-winie/
 sitemap: false
 indexing: false
 excerpt: "Przy winie (Oj ciąg, ciąg) — nuty i tekst ze Śpiewnika Weleckiego."

@@ -1,0 +1,7 @@
+{%- comment -%}
+  aplikacja Śpiewnika: service worker, panel ustawień i zachęta do instalacji;
+  wchodzi zamiast site-sw.html, bo /sw.js obejmuje cały serwis i ma własny,
+  ubogi cache — adres Śpiewnika podajemy atrybutem, żeby jawny app.js go nie
+  zawierał. Arkusz i ustawienia czytania idą osobno, w spiewnik-head.html.
+{%- endcomment -%}
+<script src="{{ '/assets/spiewnik/app.js' | relative_url }}" data-spiewnik-zakres="{{ '/spiewnik-viribus-unitis-1883/' | relative_url }}"></script>

@@ -4,7 +4,7 @@ title: "Vagans scholasticus"
 song: true
 section: towarzyskie
 order: 98
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/vagans-scholasticus/
+permalink: /spiewnik-viribus-unitis-1883/vagans-scholasticus/
 sitemap: false
 indexing: false
 excerpt: "Vagans scholasticus — nuty i tekst ze Śpiewnika Weleckiego."

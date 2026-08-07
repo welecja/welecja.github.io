@@ -4,7 +4,7 @@ title: "Pij, bracie pij!"
 song: true
 section: towarzyskie
 order: 166
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/pij-bracie-pij/
+permalink: /spiewnik-viribus-unitis-1883/pij-bracie-pij/
 sitemap: false
 indexing: false
 excerpt: "Pij, bracie pij! — nuty i tekst ze Śpiewnika Weleckiego."

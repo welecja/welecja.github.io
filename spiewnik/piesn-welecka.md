@@ -4,7 +4,7 @@ title: "Pieśń welecka"
 song: true
 section: oficjalne
 order: 69
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-welecka/
+permalink: /spiewnik-viribus-unitis-1883/piesn-welecka/
 sitemap: false
 indexing: false
 excerpt: "Pieśń welecka — nuty i tekst ze Śpiewnika Weleckiego."

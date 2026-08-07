@@ -4,7 +4,7 @@ title: "II oficjalna pieśń K! Konwent Polonia"
 song: true
 section: oficjalne
 order: 18
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/ii-oficjalna-piesn-konwentu-polonia/
+permalink: /spiewnik-viribus-unitis-1883/ii-oficjalna-piesn-konwentu-polonia/
 sitemap: false
 indexing: false
 excerpt: "II oficjalna pieśń K! Konwent Polonia — nuty i tekst ze Śpiewnika Weleckiego."

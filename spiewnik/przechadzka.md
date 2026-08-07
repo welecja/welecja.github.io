@@ -4,7 +4,7 @@ title: "Przechadzka"
 song: true
 section: towarzyskie
 order: 246
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/przechadzka/
+permalink: /spiewnik-viribus-unitis-1883/przechadzka/
 sitemap: false
 indexing: false
 excerpt: "Przechadzka — nuty i tekst ze Śpiewnika Weleckiego."

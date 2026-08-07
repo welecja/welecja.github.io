@@ -1,8 +1,11 @@
 ---
 title: Śpiewnik
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/
+permalink: /spiewnik-viribus-unitis-1883/
+redirect_from:
+  - /bardzo-tajny-link-do-spiewnika-haslo1883/
 sitemap: false
 indexing: false
+spiewnik_app: true # spis leży poza spiewnik/, więc nie łapie go domyślna reguła z _config.yml
 excerpt: "Śpiewnik Welecki — nagrania, nuty i teksty pieśni oficjalnych i towarzyskich Korporacji Akademickiej Welecja."
 ---
 
@@ -34,7 +37,7 @@ Pieśń od zawsze towarzyszy życiu korporacyjnemu — od uroczystych kwater po 
   </ul>
 </div>
 
-<p class="song__copyright">© Korporacja Akademicka Welecja · <a href="{{ '/bardzo-tajny-link-do-spiewnika-haslo1883/o-spiewniku/' | relative_url }}">O śpiewniku</a></p>
+<p class="song__copyright">© Korporacja Akademicka Welecja · <a href="{{ '/spiewnik-viribus-unitis-1883/o-spiewniku/' | relative_url }}">O śpiewniku</a></p>
 
 <style>
   .song-search { margin: 1.6rem 0; max-width: 30rem; }

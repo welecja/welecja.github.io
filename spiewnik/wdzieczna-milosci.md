@@ -4,7 +4,7 @@ title: "Wdzięczna miłości"
 song: true
 section: towarzyskie
 order: 254
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/wdzieczna-milosci/
+permalink: /spiewnik-viribus-unitis-1883/wdzieczna-milosci/
 sitemap: false
 indexing: false
 excerpt: "Wdzięczna miłości — nuty i tekst ze Śpiewnika Weleckiego."

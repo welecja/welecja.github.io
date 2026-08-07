@@ -4,7 +4,7 @@ title: "Śpiew akademików"
 song: true
 section: towarzyskie
 order: 190
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/spiew-akademikow/
+permalink: /spiewnik-viribus-unitis-1883/spiew-akademikow/
 sitemap: false
 indexing: false
 excerpt: "Śpiew akademików — nuty i tekst ze Śpiewnika Weleckiego."

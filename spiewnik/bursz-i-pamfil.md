@@ -4,7 +4,7 @@ title: "Bursz i Pamfil"
 song: true
 section: towarzyskie
 order: 237
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/bursz-i-pamfil/
+permalink: /spiewnik-viribus-unitis-1883/bursz-i-pamfil/
 sitemap: false
 indexing: false
 excerpt: "Bursz i Pamfil — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Użyjmy rozkosz życia"
 song: true
 section: towarzyskie
 order: 81
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/uzyjmy-rozkosz-zycia/
+permalink: /spiewnik-viribus-unitis-1883/uzyjmy-rozkosz-zycia/
 sitemap: false
 indexing: false
 excerpt: "Użyjmy rozkosz życia — nuty i tekst ze Śpiewnika Weleckiego."

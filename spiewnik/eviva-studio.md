@@ -4,7 +4,7 @@ title: "Eviva studio"
 song: true
 section: towarzyskie
 order: 178
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/eviva-studio/
+permalink: /spiewnik-viribus-unitis-1883/eviva-studio/
 sitemap: false
 indexing: false
 excerpt: "Eviva studio — nuty i tekst ze Śpiewnika Weleckiego."

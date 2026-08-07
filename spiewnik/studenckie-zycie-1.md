@@ -4,7 +4,7 @@ title: "Studenckie życie I"
 song: true
 section: towarzyskie
 order: 90
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/studenckie-zycie-1/
+permalink: /spiewnik-viribus-unitis-1883/studenckie-zycie-1/
 sitemap: false
 indexing: false
 excerpt: "Studenckie życie I — nuty i tekst ze Śpiewnika Weleckiego."

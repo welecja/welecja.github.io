@@ -4,7 +4,7 @@ title: "Pieśń filisterska"
 song: true
 section: towarzyskie
 order: 43
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-filisterska/
+permalink: /spiewnik-viribus-unitis-1883/piesn-filisterska/
 sitemap: false
 indexing: false
 excerpt: "Pieśń filisterska — nuty i tekst ze Śpiewnika Weleckiego."

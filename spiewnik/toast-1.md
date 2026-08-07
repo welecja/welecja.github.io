@@ -4,7 +4,7 @@ title: "Toast I"
 song: true
 section: towarzyskie
 order: 115
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-1/
+permalink: /spiewnik-viribus-unitis-1883/toast-1/
 sitemap: false
 indexing: false
 excerpt: "Toast I — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Pamiętne dawne Lechity"
 song: true
 section: towarzyskie
 order: 74
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/pamietne-dawne-lechity/
+permalink: /spiewnik-viribus-unitis-1883/pamietne-dawne-lechity/
 sitemap: false
 indexing: false
 excerpt: "Pamiętne dawne Lechity — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "W dni naszych wiośnie"
 song: true
 section: towarzyskie
 order: 220
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/w-dni-naszych-wiosnie/
+permalink: /spiewnik-viribus-unitis-1883/w-dni-naszych-wiosnie/
 sitemap: false
 indexing: false
 excerpt: "W dni naszych wiośnie — nuty i tekst ze Śpiewnika Weleckiego."

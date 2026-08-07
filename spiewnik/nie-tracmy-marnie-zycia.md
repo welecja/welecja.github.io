@@ -4,7 +4,7 @@ title: "Nie traćmy marnie życia"
 song: true
 section: towarzyskie
 order: 219
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/nie-tracmy-marnie-zycia/
+permalink: /spiewnik-viribus-unitis-1883/nie-tracmy-marnie-zycia/
 sitemap: false
 indexing: false
 excerpt: "Nie traćmy marnie życia — nuty i tekst ze Śpiewnika Weleckiego."

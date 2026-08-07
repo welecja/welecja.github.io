@@ -4,7 +4,7 @@ title: "Toast IIIb"
 song: true
 section: towarzyskie
 order: 119
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-3b/
+permalink: /spiewnik-viribus-unitis-1883/toast-3b/
 sitemap: false
 indexing: false
 excerpt: "Toast IIIb — nuty i tekst ze Śpiewnika Weleckiego."

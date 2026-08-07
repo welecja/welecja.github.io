@@ -12,11 +12,16 @@ const buildContentBlob = () => {
     {%- for post in site.posts limit: 10 -%}
       "{{ post.url | relative_url }}",
     {%- endfor -%}
+    {%- comment -%}
+      sitemap: false = strona spoza publicznego spisu; jej adres nie może trafić
+      do cache'u, bo /sw.js jest jawny — potrzebne strony służbowe dopisujemy niżej
+    {%- endcomment -%}
     {%- for page in site.pages -%}
-      {%- unless page.url contains 'sw.js' or page.url contains '404.html' -%}
+      {%- unless page.url contains 'sw.js' or page.url contains '404.html' or page.sitemap == false -%}
         "{{ page.url | relative_url }}",
       {%- endunless -%}
     {%- endfor -%}
+      "{{ '/offline/' | relative_url }}", "{{ '/manifest.json' | relative_url }}", "{{ '/assets/search.json' | relative_url }}", "{{ '/feed.xml' | relative_url }}",
       "{{ site.logo | relative_url }}", "{{ site.baseurl }}/assets/default-offline-image.png", "{{ site.baseurl }}/assets/scripts/fetch.js"
   ]
 }
@@ -33,7 +38,12 @@ const clearOldCache = () => {
     return Promise.all(
       keys
         .filter(key => {
-          return key !== cacheName;
+          // Cache'e Śpiewnika (spiewnik-shell-*, spiewnik-media) należą do
+          // osobnego service workera o węższym zakresie. Bez tego wyjątku każdy
+          // build serwisu kasował komuś nagrania i nuty pobrane offline przed
+          // wyjazdem — bo ten worker obejmuje całą domenę i sprząta wszystko,
+          // co nie jest jego własnym cache'em.
+          return key !== cacheName && key.indexOf('spiewnik-') !== 0;
         })
         .map(key => {
           console.log(`Service Worker: removing cache ${key}`);

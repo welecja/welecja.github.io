@@ -4,7 +4,7 @@ title: "Kredytory"
 song: true
 section: towarzyskie
 order: 154
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/kredytory/
+permalink: /spiewnik-viribus-unitis-1883/kredytory/
 sitemap: false
 indexing: false
 excerpt: "Kredytory — nuty i tekst ze Śpiewnika Weleckiego."

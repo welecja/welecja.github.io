@@ -4,7 +4,7 @@ title: "Toast VIII"
 song: true
 section: towarzyskie
 order: 124
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-8/
+permalink: /spiewnik-viribus-unitis-1883/toast-8/
 sitemap: false
 indexing: false
 excerpt: "Toast VIII — nuty i tekst ze Śpiewnika Weleckiego."

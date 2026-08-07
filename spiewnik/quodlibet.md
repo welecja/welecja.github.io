@@ -4,7 +4,7 @@ title: "Quodlibet"
 song: true
 section: towarzyskie
 order: 230
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/quodlibet/
+permalink: /spiewnik-viribus-unitis-1883/quodlibet/
 sitemap: false
 indexing: false
 excerpt: "Quodlibet — nuty i tekst ze Śpiewnika Weleckiego."

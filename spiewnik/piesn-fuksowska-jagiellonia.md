@@ -4,7 +4,7 @@ title: "Pieśń fuksowska K! Jagiellonia"
 song: true
 section: towarzyskie
 order: 250
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-fuksowska-jagiellonia/
+permalink: /spiewnik-viribus-unitis-1883/piesn-fuksowska-jagiellonia/
 sitemap: false
 indexing: false
 excerpt: "Pieśń fuksowska K! Jagiellonia — nuty i tekst ze Śpiewnika Weleckiego."

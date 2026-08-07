@@ -4,7 +4,7 @@ title: "W piwnicznej izbie"
 song: true
 section: towarzyskie
 order: 141
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/w-piwnicznej-izbie/
+permalink: /spiewnik-viribus-unitis-1883/w-piwnicznej-izbie/
 sitemap: false
 indexing: false
 excerpt: "W piwnicznej izbie — nuty i tekst ze Śpiewnika Weleckiego."

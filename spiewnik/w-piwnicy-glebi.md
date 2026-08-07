@@ -4,7 +4,7 @@ title: "W piwnicy głębi"
 song: true
 section: towarzyskie
 order: 138
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/w-piwnicy-glebi/
+permalink: /spiewnik-viribus-unitis-1883/w-piwnicy-glebi/
 sitemap: false
 indexing: false
 excerpt: "W piwnicy głębi — nuty i tekst ze Śpiewnika Weleckiego."

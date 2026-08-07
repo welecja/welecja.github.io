@@ -4,7 +4,7 @@ title: "Noe III"
 song: true
 section: towarzyskie
 order: 162
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/noe-3/
+permalink: /spiewnik-viribus-unitis-1883/noe-3/
 sitemap: false
 indexing: false
 excerpt: "Noe III — nuty i tekst ze Śpiewnika Weleckiego."

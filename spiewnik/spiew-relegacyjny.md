@@ -4,7 +4,7 @@ title: "Śpiew relegacyjny"
 song: true
 section: towarzyskie
 order: 241
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/spiew-relegacyjny/
+permalink: /spiewnik-viribus-unitis-1883/spiew-relegacyjny/
 sitemap: false
 indexing: false
 excerpt: "Śpiew relegacyjny — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Hymn Arkonii"
 song: true
 section: oficjalne
 order: 14
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hymn-arkonii/
+permalink: /spiewnik-viribus-unitis-1883/hymn-arkonii/
 sitemap: false
 indexing: false
 excerpt: "Hymn K! Arkonia — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

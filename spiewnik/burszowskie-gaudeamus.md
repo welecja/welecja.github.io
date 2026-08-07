@@ -4,7 +4,7 @@ title: "Burszowskie Gaudeamus"
 song: true
 section: towarzyskie
 order: 39
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/burszowskie-gaudeamus/
+permalink: /spiewnik-viribus-unitis-1883/burszowskie-gaudeamus/
 sitemap: false
 indexing: false
 excerpt: "Burszowskie Gaudeamus — nuty i tekst ze Śpiewnika Weleckiego."

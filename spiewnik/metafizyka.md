@@ -4,7 +4,7 @@ title: "Metafizyka"
 song: true
 section: towarzyskie
 order: 243
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/metafizyka/
+permalink: /spiewnik-viribus-unitis-1883/metafizyka/
 sitemap: false
 indexing: false
 excerpt: "Metafizyka — nuty i tekst ze Śpiewnika Weleckiego."

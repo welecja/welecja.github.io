@@ -4,7 +4,7 @@ title: "Toast VII"
 song: true
 section: towarzyskie
 order: 123
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-7/
+permalink: /spiewnik-viribus-unitis-1883/toast-7/
 sitemap: false
 indexing: false
 excerpt: "Toast VII — nuty i tekst ze Śpiewnika Weleckiego."

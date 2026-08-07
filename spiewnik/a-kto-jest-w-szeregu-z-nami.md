@@ -4,7 +4,7 @@ title: "Pieśń — A kto jest w szeregu z nami"
 song: true
 section: towarzyskie
 order: 76
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/a-kto-jest-w-szeregu-z-nami/
+permalink: /spiewnik-viribus-unitis-1883/a-kto-jest-w-szeregu-z-nami/
 sitemap: false
 indexing: false
 excerpt: "Pieśń — A kto jest w szeregu z nami — nuty i tekst ze Śpiewnika Weleckiego."

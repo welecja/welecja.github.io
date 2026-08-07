@@ -4,7 +4,7 @@ title: "Hejże bracia"
 song: true
 section: towarzyskie
 order: 79
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/hejze-bracia/
+permalink: /spiewnik-viribus-unitis-1883/hejze-bracia/
 sitemap: false
 indexing: false
 excerpt: "Hejże bracia — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

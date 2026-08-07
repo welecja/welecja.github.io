@@ -4,7 +4,7 @@ title: "Bracia nuż do koła"
 song: true
 section: towarzyskie
 order: 195
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/bracia-nuz-do-kola/
+permalink: /spiewnik-viribus-unitis-1883/bracia-nuz-do-kola/
 sitemap: false
 indexing: false
 excerpt: "Bracia nuż do koła — nuty i tekst ze Śpiewnika Weleckiego."

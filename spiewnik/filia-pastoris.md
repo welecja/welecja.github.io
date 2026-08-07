@@ -4,7 +4,7 @@ title: "Filia pastoris"
 song: true
 section: towarzyskie
 order: 181
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/filia-pastoris/
+permalink: /spiewnik-viribus-unitis-1883/filia-pastoris/
 sitemap: false
 indexing: false
 excerpt: "Filia pastoris — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Pieśń puławska — Puławianka"
 song: true
 section: towarzyskie
 order: 86
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-pulawska/
+permalink: /spiewnik-viribus-unitis-1883/piesn-pulawska/
 sitemap: false
 indexing: false
 excerpt: "Pieśń puławska — Puławianka — nuty i tekst ze Śpiewnika Weleckiego."

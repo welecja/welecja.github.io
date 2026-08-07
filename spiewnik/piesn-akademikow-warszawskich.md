@@ -4,7 +4,7 @@ title: "Pieśń akademików warszawskich"
 song: true
 section: towarzyskie
 order: 185
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piesn-akademikow-warszawskich/
+permalink: /spiewnik-viribus-unitis-1883/piesn-akademikow-warszawskich/
 sitemap: false
 indexing: false
 excerpt: "Pieśń akademików warszawskich — nuty i tekst ze Śpiewnika Weleckiego."

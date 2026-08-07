@@ -4,7 +4,7 @@ title: "Kochajmy się"
 song: true
 section: towarzyskie
 order: 261
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/kochajmy-sie/
+permalink: /spiewnik-viribus-unitis-1883/kochajmy-sie/
 sitemap: false
 indexing: false
 excerpt: "Kochajmy się — nagranie, nuty i tekst ze Śpiewnika Weleckiego."

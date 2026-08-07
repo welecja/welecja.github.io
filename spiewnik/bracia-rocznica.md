@@ -4,7 +4,7 @@ title: "Bracia, rocznica"
 song: true
 section: towarzyskie
 order: 197
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/bracia-rocznica/
+permalink: /spiewnik-viribus-unitis-1883/bracia-rocznica/
 sitemap: false
 indexing: false
 excerpt: "Bracia, rocznica — nuty i tekst ze Śpiewnika Weleckiego."

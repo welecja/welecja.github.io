@@ -4,7 +4,7 @@ title: "Noe II"
 song: true
 section: towarzyskie
 order: 159
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/noe-2/
+permalink: /spiewnik-viribus-unitis-1883/noe-2/
 sitemap: false
 indexing: false
 excerpt: "Noe II — nuty i tekst ze Śpiewnika Weleckiego."

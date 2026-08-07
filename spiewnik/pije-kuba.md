@@ -4,7 +4,7 @@ title: "Pije Kuba"
 song: true
 section: towarzyskie
 order: 126
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/pije-kuba/
+permalink: /spiewnik-viribus-unitis-1883/pije-kuba/
 sitemap: false
 indexing: false
 excerpt: "Pije Kuba — nuty i tekst ze Śpiewnika Weleckiego."

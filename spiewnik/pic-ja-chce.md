@@ -4,7 +4,7 @@ title: "Pić ja chcę"
 song: true
 section: towarzyskie
 order: 148
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/pic-ja-chce/
+permalink: /spiewnik-viribus-unitis-1883/pic-ja-chce/
 sitemap: false
 indexing: false
 excerpt: "Pić ja chcę — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Dalej bracia"
 song: true
 section: towarzyskie
 order: 222
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/dalej-bracia/
+permalink: /spiewnik-viribus-unitis-1883/dalej-bracia/
 sitemap: false
 indexing: false
 excerpt: "Dalej bracia — nuty i tekst ze Śpiewnika Weleckiego."

@@ -4,7 +4,7 @@ title: "Piosnka ryska z r. 1876"
 song: true
 section: towarzyskie
 order: 92
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/piosnka-ryska/
+permalink: /spiewnik-viribus-unitis-1883/piosnka-ryska/
 sitemap: false
 indexing: false
 excerpt: "Piosnka ryska z r. 1876 — nuty i tekst ze Śpiewnika Weleckiego."

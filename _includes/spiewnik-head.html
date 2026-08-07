@@ -1,0 +1,56 @@
+{%- comment -%}
+  nagłówek aplikacji Śpiewnika: arkusz i zapamiętane ustawienia czytania.
+  Motyw i rozmiar tekstu muszą stać na <html>, zanim przeglądarka cokolwiek
+  narysuje — inaczej ciemny Śpiewnik otwiera się białym błyskiem. Dlatego ten
+  skrypt jest tutaj, w nagłówku i w treści strony, a nie w app.js na jej końcu.
+  app.js buduje panel ustawień i woła window.spiewnik.zapisz().
+{%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/spiewnik/app.css' | relative_url }}">
+    <script>
+      window.spiewnik = (function () {
+        'use strict';
+        var el = document.documentElement;
+        var KLUCZ_MOTYW = 'spiewnik:theme';
+        var KLUCZ_ROZMIAR = 'spiewnik:fontsize';
+        // Kolor paska stanu telefonu. Jasny to barwa Śpiewnika z manifestu,
+        // ciemny to tło ciemnego motywu z app.css — muszą się zgadzać.
+        var KOLOR = { light: '#005248', dark: '#1b201f' };
+
+        function zPamieci(klucz, domyslnie) {
+          try {
+            return localStorage.getItem(klucz) || domyslnie;
+          } catch (e) {
+            return domyslnie; // tryb prywatny odmawia dostępu do localStorage
+          }
+        }
+
+        var api = {
+          motyw: 'auto',
+          rozmiar: 100,
+          /** Zapisuje wybór i od razu go pokazuje. */
+          zapisz: function (motyw, rozmiar) {
+            api.motyw = motyw;
+            api.rozmiar = rozmiar;
+            try {
+              localStorage.setItem(KLUCZ_MOTYW, motyw);
+              localStorage.setItem(KLUCZ_ROZMIAR, String(rozmiar));
+            } catch (e) { /* bez pamięci ustawienie zostaje do końca odwiedzin */ }
+            api.zastosuj();
+          },
+          zastosuj: function () {
+            var ciemno = api.motyw === 'dark' || (api.motyw !== 'light'
+              && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            el.setAttribute('data-spiewnik-theme', ciemno ? 'dark' : 'light');
+            el.style.setProperty('--spiewnik-skala', api.rozmiar / 100);
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', ciemno ? KOLOR.dark : KOLOR.light);
+          }
+        };
+
+        var motyw = zPamieci(KLUCZ_MOTYW, 'auto');
+        if (motyw === 'light' || motyw === 'dark') api.motyw = motyw;
+        api.rozmiar = parseInt(zPamieci(KLUCZ_ROZMIAR, '100'), 10) || 100;
+        api.zastosuj();
+        return api;
+      })();
+    </script>

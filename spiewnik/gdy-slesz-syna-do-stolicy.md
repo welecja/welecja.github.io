@@ -4,7 +4,7 @@ title: "Gdy ślesz syna do stolicy"
 song: true
 section: towarzyskie
 order: 147
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/gdy-slesz-syna-do-stolicy/
+permalink: /spiewnik-viribus-unitis-1883/gdy-slesz-syna-do-stolicy/
 sitemap: false
 indexing: false
 excerpt: "Gdy ślesz syna do stolicy — nuty i tekst ze Śpiewnika Weleckiego."

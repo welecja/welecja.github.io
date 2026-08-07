@@ -4,7 +4,7 @@ title: "Wiwat nasz pancerny znak"
 song: true
 section: towarzyskie
 order: 88
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/wiwat-nasz-pancerny-znak/
+permalink: /spiewnik-viribus-unitis-1883/wiwat-nasz-pancerny-znak/
 sitemap: false
 indexing: false
 excerpt: "Wiwat nasz pancerny znak — nuty i tekst ze Śpiewnika Weleckiego."

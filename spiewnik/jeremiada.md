@@ -4,7 +4,7 @@ title: "Jeremiada"
 song: true
 section: towarzyskie
 order: 173
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/jeremiada/
+permalink: /spiewnik-viribus-unitis-1883/jeremiada/
 sitemap: false
 indexing: false
 excerpt: "Jeremiada — nuty i tekst ze Śpiewnika Weleckiego."

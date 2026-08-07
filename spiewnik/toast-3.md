@@ -4,7 +4,7 @@ title: "Toast III"
 song: true
 section: towarzyskie
 order: 117
-permalink: /bardzo-tajny-link-do-spiewnika-haslo1883/toast-3/
+permalink: /spiewnik-viribus-unitis-1883/toast-3/
 sitemap: false
 indexing: false
 excerpt: "Toast III — nuty i tekst ze Śpiewnika Weleckiego."
