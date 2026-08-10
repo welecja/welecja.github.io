@@ -3,22 +3,21 @@ permalink: "manifest.json"
 layout: null
 sitemap: false
 ---
+{%- comment -%}
+  Ikony aplikacji są renderowane z kanonicznego wektora cyrkiel.svg,
+  wyciągniętego z oryginalnego pliku Illustrator PDF.
+{%- endcomment -%}
 {
   "lang": "{{ site.lang | default: "en-US" }}",
   "name": "{{ site.title }}",
   "short_name": "{{ site.short_name | default: site.title | replace: ' ', '' }}",
   "theme_color": "{{ site.manifest.theme_color | default: '#24292e' }}",
   "background_color": "{{ site.manifest.background_color | default: '#ffffff' }}",
-  {% if site.favicons -%}
-    "icons": [
-      {% for icon in site.favicons -%}
-      {
-        "src": "{{ icon[1] | relative_url }}",
-        "sizes": "{{ icon[0] }}x{{ icon[0] }}"
-      }{% if forloop.last != true %},{% endif %}
-      {% endfor %}
-    ],
-  {% endif -%}
+  "icons": [
+    { "src": "{{ '/assets/logos/cyrkiel-icon-192.png' | relative_url }}", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "{{ '/assets/logos/cyrkiel-icon-512.png' | relative_url }}", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "{{ '/assets/logos/cyrkiel-icon-maskable-512.png' | relative_url }}", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
   "start_url": "/",
   "display": "standalone"
 }

@@ -22,6 +22,13 @@ const buildContentBlob = () => {
       {%- endunless -%}
     {%- endfor -%}
       "{{ '/offline/' | relative_url }}", "{{ '/manifest.json' | relative_url }}", "{{ '/assets/search.json' | relative_url }}", "{{ '/feed.xml' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-sm.png' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel.svg' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-favicon-48.png' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-icon-180.png' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-icon-192.png' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-icon-512.png' | relative_url }}",
+      "{{ '/assets/logos/cyrkiel-icon-maskable-512.png' | relative_url }}",
       "{{ site.logo | relative_url }}", "{{ site.baseurl }}/assets/default-offline-image.png", "{{ site.baseurl }}/assets/scripts/fetch.js"
   ]
 }

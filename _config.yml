@@ -6,7 +6,7 @@
 # 5. Collections
 # 6. Jekyll collections settings
 # 7. Site settings
-# 8. Site favicons & manifest icons
+# 8. Site favicons
 # 9. Site navigation
 
 # 1. Files excluded from Jekyll builds
@@ -130,9 +130,9 @@ email: "welecja@welecja.pl"
 # short_name: "Al" # The web application short name, defaults to the site title
 css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
-# 8. Site favicons & manifest icons
-favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  32: '/assets/logos/favicon.png'
+# 8. Site favicons
+favicons: # Browser-tab icons. Syntax is 'intrinsic size: path'
+  48: '/assets/logos/cyrkiel-favicon-48.png'
 
 # 9. Site navigation
 navigation_header:
@@ -193,4 +193,3 @@ fonts:
     # przy wadze 100 tekst całego serwisu robił się cieńszy niż dotychczas,
     # bo body ma wagę 200 i przeglądarka wybiera najbliższą niższą.
     - 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Limelight&display=swap'
-

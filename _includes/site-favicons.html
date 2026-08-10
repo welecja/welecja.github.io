@@ -1,14 +1,11 @@
 {% if site.favicons %}
   {% for icon in site.favicons %}
     <link rel="icon" type="image/png" href="{{ icon[1] | relative_url }}" sizes="{{ icon[0] }}x{{ icon[0] }}">
-    {%- comment -%}
-      Strony Śpiewnika mają własną ikonę na ekran początkowy — 180×180, wpiętą
-      w default.html. Ta 32-pikselowa stawała obok niej i bywała wybierana jako
-      ostatnia z brzegu, więc Śpiewnik lądował na ekranie rozmazany. Warunek
-      siedzi w jednym wierszu z odsyłaczem, żeby strony publiczne wychodziły
-      z builda co do bajta takie same jak przedtem.
-    {%- endcomment %}
-    {% unless page.spiewnik_app %}<link rel="apple-touch-icon" sizes="{{ icon[0] }}x{{ icon[0] }}" href="{{ icon[1] | relative_url }}">{% endunless %}
   {% endfor %}
 {% endif %}
-<link rel="shortcut icon" href="{{ site.avatarurl + '?s=32' | default: site.logo | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/logos/cyrkiel.svg' | relative_url }}" sizes="any">
+{%- comment -%}
+  Śpiewnik ma własną ikonę Apple w default.html. Zwykłe strony używają dużego
+  cyrkla z nagłówków; mały favicon nie nadaje się na ikonę ekranu początkowego.
+{%- endcomment %}
+{% unless page.spiewnik_app %}<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/logos/cyrkiel-icon-180.png' | relative_url }}">{% endunless %}

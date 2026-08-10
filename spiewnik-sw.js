@@ -46,18 +46,20 @@ const POWLOKA = [
   {{ baza | append: 'manifest.json' | jsonify }},
   {{ '/assets/spiewnik/app.css' | relative_url | jsonify }},
   {{ '/assets/spiewnik/app.js' | relative_url | jsonify }},
-  {{ '/assets/logos/spiewnik-icon-192.png' | relative_url | jsonify }},
-  {{ '/assets/logos/spiewnik-icon-512.png' | relative_url | jsonify }},
-  {{ '/assets/logos/spiewnik-icon-180.png' | relative_url | jsonify }},
-  {{ '/assets/logos/spiewnik-icon-maskable-512.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-icon-192.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-icon-512.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-icon-180.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-icon-maskable-512.png' | relative_url | jsonify }},
 {%- comment -%}
-  Herb w nagłówku i cyrkiel przed tytułem stoją na każdej stronie Śpiewnika —
-  herb znacznikiem <img>, cyrkiel tłem nagłówka z arkusza. Oba leżą poza
-  /assets/audio|images/spiewnik|documents, więc nie łapie ich reguła mediów i
-  bez tych dwóch wierszy offline zostawały puste ramki.
+  Herb i raster cyrkla stoją w nagłówku; kanoniczny wektor, favicon i ikony
+  aplikacji uzupełniają identyfikację strony. Wszystkie leżą poza
+  /assets/audio|images/spiewnik|documents, więc nie łapie ich reguła mediów
+  i trzeba je jawnie zachować offline.
 {%- endcomment %}
   {{ '/assets/logos/herb.png' | relative_url | jsonify }},
   {{ '/assets/logos/cyrkiel-sm.png' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel.svg' | relative_url | jsonify }},
+  {{ '/assets/logos/cyrkiel-favicon-48.png' | relative_url | jsonify }},
 {%- comment -%}
   Przy css_inline: true arkusz jest wklejony w <style> każdej strony i nie ma
   czego pobierać osobno; po przełączeniu na plik trzeba go mieć w powłoce, bo
@@ -81,6 +83,7 @@ function typDla(sciezka) {
   if (s.endsWith('.css')) return 'text/css';
   if (s.endsWith('.json')) return 'application/json';
   if (s.endsWith('.png')) return 'image/png';
+  if (s.endsWith('.svg')) return 'image/svg+xml';
   if (s.endsWith('.jpg') || s.endsWith('.jpeg')) return 'image/jpeg';
   if (s.endsWith('.mp3')) return 'audio/mpeg';
   if (s.endsWith('.pdf')) return 'application/pdf';
