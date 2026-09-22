@@ -12,7 +12,7 @@ This page confirms that the domain **welecja.pl** is the official and primary in
 
 **KORPORACJA AKADEMICKA WELECJA**  
 a Polish student association (*stowarzyszenie*) founded in 1883, registered in the Polish National Court Register (Krajowy Rejestr Sądowy) under number **KRS 0000295248**  
-Registered address: ul. Śląska 46, 02-472 Warszawa, Poland  
+Registered address: ul. Obrońców Tobruku 21B m. 30, 01-494 Warszawa, Poland  
 Correspondence address: Skrytka pocztowa 99, 00-950 Warszawa 1, Poland
 
 welecja.pl is the organization's only domain. It hosts the organization's official website (this site) and the organization's email service (Google Workspace, administered by konradurban@welecja.pl on behalf of the organization's board — the prezydium).
@@ -29,7 +29,7 @@ Niniejsza strona potwierdza, że domena **welecja.pl** jest oficjalną i podstaw
 
 **KORPORACJA AKADEMICKA WELECJA**  
 stowarzyszenie studenckie założone w 1883 r., wpisane do Krajowego Rejestru Sądowego pod numerem **KRS 0000295248**  
-Adres: ul. Śląska 46, 02-472 Warszawa  
+Adres: ul. Obrońców Tobruku 21B m. 30, 01-494 Warszawa  
 Adres korespondencyjny: Skrytka pocztowa 99, 00-950 Warszawa 1
 
 welecja.pl jest jedyną domeną stowarzyszenia — służy jako oficjalna strona internetowa oraz domena pocztowa (Google Workspace, administrowana przez konradurban@welecja.pl w imieniu prezydium).
