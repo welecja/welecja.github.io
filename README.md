@@ -35,7 +35,7 @@ Use the format `YEAR-MONTH-DAY-title.md` (e.g., `2024-01-10-my-first-post.md`). 
   ---
   ```
 
-categories and feature_image are optional (see section to learn how to upload images). Below the front matter, write your blog post. You can use Markdown to format your text. See [Markdown Guide](https://www.markdownguide.org/basic-syntax/) for syntax help. Also see [Elements](https://www.welecja.pl/elements/) for what kind of elements (headers, maps, videos etc.) can be included in posts.
+categories and feature_image are optional (see section to learn how to upload images). Below the front matter, write your blog post. You can use Markdown to format your text. See [Markdown Guide](https://www.markdownguide.org/basic-syntax/) for syntax help. Also see [Elements](elements.md) for what kind of elements (headers, maps, videos etc.) can be included in posts.
 
 ### 5. Saving Your Blog Post
 - Scroll down to the bottom of the page.

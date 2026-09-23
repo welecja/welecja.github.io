@@ -1,6 +1,6 @@
 ---
 title: Kontakt
-excerpt: "Korporacje skartelowane z Welecją"
+excerpt: "Dane kontaktowe i prezydium Korporacji Akademickiej Welecja w Warszawie."
 
 ---
 

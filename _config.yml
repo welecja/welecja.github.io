@@ -12,6 +12,8 @@
 # 1. Files excluded from Jekyll builds
 exclude:
 - README.md
+- README_alembic_theme.md
+- elements.md
 - CODE_OF_CONDUCT.md
 - CONTRIBUTING.md
 - screenshot.png
@@ -118,7 +120,7 @@ lang: pl-PL # Set the site language
 title: "Welecja" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/herb.png" # Site logo, also used in jekyll-seo-tag
 description: "Korporacja Akademicka Welecja" # Site description and default description, also used in jekyll-seo-tag
-url: "https://welecja.pl" # Site url, also used in jekyll-seo-tag
+url: "https://www.welecja.pl" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/welecja/"
 email: "welecja@welecja.pl"
@@ -167,7 +169,7 @@ navigation_header:
 
 navigation_footer:
 - title:  Korporacja Akademicka Welecja
-  url: https://welecja.pl
+  url: https://www.welecja.pl
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   # Twitter: https://twitter.com/DavidDarnes
