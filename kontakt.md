@@ -33,7 +33,7 @@ Skrytka pocztowa 99
 00-950, Warszawa 1
 
 
-Korporacja Akademicka Welecja, ul. Obrońców Tobruku 21B m. 30, 01-494 Warszawa
+Korporacja Akademicka Welecja, ul. Śląska 46, 02-472 Warszawa
 Stowarzyszenie studenckie zarejestrowane w KRS pod numerem: 0000295248
 
 Numer rachunku bankowego: 
